@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+  <!-- Google Fonts: Inter -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    /* 기본 스타일 */
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      color: #111;
+      background-color: #fff;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: #fff;
+      border-bottom: 1px solid #ddd;
+      z-index: 1000;
+    }
+
+    nav {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+    }
+
+    nav a {
+      margin-left: 1.5rem;
+      text-decoration: none;
+      color: #111;
+      font-weight: 500;
+    }
+
+    section {
+      padding: 100px 20px;
+      max-width: 900px;
+      margin: 0 auto;
+      border-bottom: 1px solid #eee;
+    }
+
+    .hero {
+      padding-top: 80px;
+      text-align: center;
+    }
+
+    .hero img {
+      width: 100%;
+      max-width: 1000px;
+      height: auto;
+      object-fit: cover;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      line-height: 1.7;
+      font-size: 1rem;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav a {
+        margin: 0.5rem 0;
+      }
+
+      .hero img {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 상단 메뉴 -->
+  <header>
+    <nav>
+      <div><strong>My Portfolio</strong></div>
+      <div>
+        <a href="#about">About</a>
+        <a href="#marketing">Marketing</a>
+        <a href="#design">Design</a>
+        <a href="#video">Video</a>
+        <a href="#youtube">YouTube</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- 탑 섹션 (Motion Graphic) -->
+  <section class="hero">
+    <img src="motion-placeholder.gif" alt="Motion Graphic" />
+    <!-- 위 이미지 대신 네가 만든 GIF 파일로 교체 (예: motion.gif) -->
+  </section>
+
+  <!-- 각 섹션 -->
+  <section id="about">
+    <h2>About</h2>
+    <p>간단한 자기소개, 경력, 관심 분야 등을 적어보세요.</p>
+  </section>
+
+  <section id="marketing">
+    <h2>Marketing</h2>
+    <p>기획했던 캠페인, 분석한 사례, 마케팅 전략 등을 소개하세요.</p>
+  </section>
+
+  <section id="design">
+    <h2>Design</h2>
+    <p>그래픽, 브랜드, 공간, UI 등 작업물을 썸네일/링크와 함께 보여주세요.</p>
+  </section>
+
+  <section id="video">
+    <h2>Video</h2>
+    <p>제작한 영상에 대한 설명과 링크 또는 임베드로 보여줄 수 있어요.</p>
+  </section>
+
+  <section id="youtube">
+    <h2>YouTube</h2>
+    <p>운영 중인 채널 설명과 영상 링크, 분석 콘텐츠 등을 보여주세요.</p>
+  </section>
+
+</body>
+</html>
