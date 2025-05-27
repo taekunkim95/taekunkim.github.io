@@ -76,7 +76,20 @@
     .menu a:hover {
       color: #000000;
     }
+	  
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+    }
 
+    .menu-toggle div {
+      width: 24px;
+      height: 2px;
+      background-color: #333;
+    }
+	  
     .lang-switch {
       font-size: 11px;
       background: none;
@@ -116,6 +129,7 @@
       display: block;
       margin-top: 20px;
       margin-bottom: 80px;
+	  border: none;
     }
 
     h2 {
@@ -176,6 +190,50 @@
       font-weight: 500;
       color: #444;
     }
+	  
+	  
+
+    @media (max-width: 1024px) {
+      .menu {
+        gap: 3rem;
+        font-size: 0.95rem;
+      }
+    }
+
+    @media (max-width: 900px) {
+      .menu {
+        gap: 2rem;
+        font-size: 0.9rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .menu {
+        display: none;
+        flex-direction: column;
+        background: var(--bg-color);
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem 0;
+        gap: 1.5rem;
+      }
+
+      .menu.active {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: flex;
+      }
+
+      .menu-wrapper {
+        justify-content: space-between;
+      }
+    }
+	  
+	  
   </style>
 </head>
 <body>
@@ -187,17 +245,22 @@
         </a>
       </div>
 
-      <div class="menu-wrapper">
-        <div class="menu">
-          <a href="#Profile">PROFILE</a>
-          <a href="design.html">DESIGN</a>
-          <a href="video.html">VIDEO</a>
-          <a href="marketing.html">MARKETING</a>
-          <a href="casestudy.html">CASE STUDY</a>
-		  <button class="lang-switch" onclick="location.href='index.html'">KOR</button>
+ <div class="menu-wrapper">
+  <div class="menu-toggle" onclick="toggleMenu()">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+  <div class="menu">
+    <a href="#Profile">PROFILE</a>
+    <a href="design.html">DESIGN</a>
+    <a href="video.html">VIDEO</a>
+    <a href="marketing.html">MARKETING</a>
+    <a href="casestudy.html">CASE STUDY</a>
+    <button class="lang-switch" onclick="location.href='index.html'">KOR</button>
+  </div>
+</div>
 
-        </div>
-      </div>
     </nav>
   </header>
 
