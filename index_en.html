@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-color: #fcfcfc;
+      --text-color: #222;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      color: var(--text-color);
+      background-color: var(--bg-color);
+      scroll-behavior: smooth;
+    }
+
+    header {
+      position: fixed;
+      left: 0;
+      width: 100%;
+      background: var(--bg-color);
+      z-index: 1000;
+    }
+
+    nav {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 1.2rem 1.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .logo {
+      margin-bottom: 1.5rem;
+      margin-top: 0.6rem;
+    }
+
+    .logo img {
+      width: 80px;
+      height: auto;
+      cursor: pointer;
+    }
+
+    .menu-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      gap: 1rem;
+    }
+
+    .menu {
+      display: flex;
+      gap: 5rem;
+      flex-wrap: nowrap;
+      align-items: center;
+      transition: gap 0.3s, font-size 0.3s;
+      margin-top: 0.5rem;
+    }
+
+    .menu a {
+      text-decoration: none;
+      color: #757575;
+      font-weight: 350!important;
+      font-size: 12px;
+      transition: color 0.2s;
+      white-space: nowrap;
+    }
+
+    .menu a:hover {
+      color: #000000;
+    }
+
+    .lang-switch {
+      font-size: 11px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: #757575;
+      font-weight: 200;
+    }
+
+    section {
+      padding: 10px 40px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .hero {
+      padding-top: 165px;
+      text-align: left;
+    }
+
+    .intro-text {
+      font-family: 'Inter', sans-serif !important;
+      font-weight: 350 !important;
+      font-size: 12px;
+      color: #444;
+      margin-bottom: 2rem;
+      line-height: 1.6;
+      max-width: 700px;
+      margin-right: auto;
+    }
+
+    .hero video {
+      width: 95%;
+      height: auto;
+      max-width: 1000px;
+      object-fit: contain;
+      display: block;
+      margin-top: 20px;
+      margin-bottom: 80px;
+    }
+
+    h2 {
+      font-family: 'Inter', sans-serif !important;
+      font-weight: 400;
+      font-size: 16px;
+      margin-bottom: 0.8rem;
+      color: #444;
+    }
+
+    h3 {
+      font-family: 'Inter', sans-serif !important;
+      font-weight: 500;
+      font-size: 14px;
+      margin-bottom: 0.8rem;
+      color: #444;
+    }
+
+    p {
+      font-family: 'Inter', sans-serif !important;
+      line-height: 1.7;
+      font-size: 12px;
+      font-weight: 350 !important;
+      color: #444;
+    }
+
+    .profile-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2.5rem;
+      align-items: flex-start;
+    }
+
+    .profile-left {
+      width: 160px;
+      flex-shrink: 0;
+    }
+
+    .profile-right p {
+      line-height: 1;
+    }
+
+    .profile-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .profile-section h3 {
+      font-weight: 500;
+      font-size: 14px;
+      color: #303030;
+      margin-bottom: 0.5rem;
+    }
+
+    .soft-label {
+      font-weight: 500;
+      color: #444;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">
+        <a href="#top">
+          <img src="taekun_logo.png" alt="logo" />
+        </a>
+      </div>
+
+      <div class="menu-wrapper">
+        <div class="menu">
+          <a href="#Profile">PROFILE</a>
+          <a href="design.html">DESIGN</a>
+          <a href="video.html">VIDEO</a>
+          <a href="marketing.html">MARKETING</a>
+          <a href="casestudy.html">CASE STUDY</a>
+		  <button class="lang-switch" onclick="location.href='index.html'">KOR</button>
+
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <section class="hero" id="top">
+    <video autoplay loop playsinline muted>
+      <source src="portfolio.mp4" type="video/mp4" />
+      <p>Your browser does not support the video.</p>
+    </video>
+  </section>
+
+  <section id="Profile">
+    <h2>Profile</h2>
+    <div class="profile-container">
+      <div class="profile-left">
+        <img src="profile.jpg" alt="Profile Photo" style="width: 88%; height: auto; border-radius: 0; object-fit: cover; " />
+      </div>
+      <div class="profile-right">
+        <h3>Taekun Kim</h3>
+        <p><span class="soft-label">Date of Birth</span>: 1995.10.16 (Male)</p>
+        <p><span class="soft-label">Email</span>: taekun.kim95@gmil.com</p>
+        <p><span class="soft-label">Phone</span>: (+82)10-9050-9380</p>
+        <p><span class="soft-label">YouTube</span>: @PotbadMagazine</p>
+        <p><span class="soft-label">Instagram</span>: @taegun.kim</p>
+      </div>
+    </div>
+
+    <div class="profile-grid">
+      <div class="profile-section">
+        <h3>Career</h3>
+        <p><span class="soft-label">MXN JAPAN</span>, Tokyo — Full-time<br>
+          Jan 2023 - Jan 2025<br>
+          Graphic Designer, Marketer<br>
+          Design: Visual content production for print, web, mobile<br>
+          Marketing: Popup/event planning and execution, brand analysis</p>
+
+        <p><span class="soft-label">KIDP</span>, Seoul → Tokyo — Intern<br>
+          Aug 2022 - Dec 2022<br>
+          Assigned to MXN JAPAN<br>
+          Created landing pages, promotional videos, retouching, etc.</p>
+      </div>
+
+      <div class="profile-section">
+        <h3>Education & Military</h3>
+        <p><span class="soft-label">Yonsei Univ. Mirae Campus</span>, Wonju — Bachelor<br>
+          Major in Visual Design<br>
+          Mar 2016 - Aug 2022 / GPA: 3.94 / 4.5</p>
+
+        <p><span class="soft-label">Dongguk University High School</span>, Seoul — Graduate<br>
+          Mar 2011 - Mar 2014</p>
+
+        <p><span class="soft-label">ROK Army</span> — Discharged as Sergeant<br>
+          Jan 2017 - Oct 2018</p>
+      </div>
+
+      <div class="profile-section">
+        <h3>Skills</h3>
+        <p><span class="soft-label">Adobe</span>: Photoshop, Illustrator, Premiere, After Effects<br>
+           <span class="soft-label">MS</span>: Excel, Word<br>
+           <span class="soft-label">Others</span>: SketchUp</p>
+
+        <h3 style="margin-top: 2rem;">Languages</h3>
+        <p><span class="soft-label">Japanese</span>: Business level<br>
+           <span class="soft-label">English</span>: Basic conversation</p>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
+
