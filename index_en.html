@@ -251,7 +251,7 @@
     <div></div>
     <div></div>
   </div>
-  <div class="menu">
+  <div class="menu" id="navMenu">
     <a href="#Profile">PROFILE</a>
     <a href="design.html">DESIGN</a>
     <a href="video.html">VIDEO</a>
@@ -327,6 +327,19 @@
       </div>
     </div>
   </section>
+	
+  <script>
+    function toggleLang() {
+      const btn = document.querySelector('.lang-switch');
+      btn.textContent = btn.textContent === 'ENG' ? 'KOR' : 'ENG';
+    }
+
+     function toggleMenu() {
+     const menu = document.getElementById('navMenu');
+  menu.classList.toggle('active');
+}
+
+  </script>
+
 </body>
 </html>
-
