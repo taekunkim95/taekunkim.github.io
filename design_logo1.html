@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>ART POSTER SERIES 1</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-color: #fcfcfc;
+      --text-color: #222;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      color: var(--text-color);
+      background-color: var(--bg-color);
+      scroll-behavior: smooth;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: var(--bg-color);
+      z-index: 1000;
+    }
+
+    nav {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 1.2rem 1.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .logo {
+      margin-bottom: 2rem;
+      margin-top: 0.6rem;
+    }
+
+    .logo img {
+      width: 80px;
+      height: auto;
+      cursor: pointer;
+    }
+
+    .menu-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      gap: 1rem;
+    }
+
+    .menu {
+      display: flex;
+      gap: 5rem;
+      flex-wrap: nowrap;
+      align-items: center;
+    }
+
+    .menu a {
+      text-decoration: none;
+      color: #757575;
+      font-weight: 350;
+      font-size: 12px;
+      transition: color 0.2s;
+    }
+
+    .menu a:hover {
+      color: #000000;
+    }
+
+    .lang-switch {
+      font-size: 11px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: #757575;
+      font-weight: 200;
+    }
+
+    section {
+      padding: 10px 40px 10px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .hero {
+      padding-top: 165px;
+      text-align: left;
+    }
+
+    .h2 {
+      font-weight: 400;
+      font-size: 16px;
+      color: #757575;
+      margin-bottom: 2.2rem;
+      line-height: 1.6;
+      max-width: 700px;
+      margin-right: auto;
+    }
+
+    .project-gallery {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0rem;
+	  padding-top: 0px;
+      padding-bottom: 100px;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+
+    .project-image {
+      width: 75vw;
+      max-width: 1200px;
+      height: auto;
+      display: block;
+      margin: 0 auto 0rem auto; /* 이미지 아래 간격 줄임, 중앙 정렬 유지 */
+	  margin-bottom: 0rem;
+    }
+
+    .project-title {
+      margin-top: 2rem;
+      margin-bottom: 1.5rem;
+      font-size: 18px;
+      font-weight: 500;
+      color: #757575;
+      max-width: 1200px;
+      text-align: left;
+      width: 75vw;
+      margin-left: 0;
+    }
+
+	 .project-title2 {
+      margin-top: 0;
+      margin-bottom: 10px;
+      font-size: 16px;
+      font-weight: 500;
+      color: #757575;
+      max-width: 1200px;
+      text-align: left;
+      width: 75vw;
+      margin-left: 0;
+    }
+
+	  
+    .project-description {
+      font-size: 14px;
+      line-height: 1.7;
+      color: #595959;
+      margin-bottom: 45px;
+      width: 75vw;
+      max-width: 1200px;
+      margin-left: 0;
+    }
+
+	 .project-description2 {
+      margin-top: 2rem;
+	  margin-bottom: 2rem;
+	  font-size: 12px;
+      line-height: 1.7;
+      color: #757575;
+      margin-bottom: 45px;
+      width: 75vw;
+      max-width: 1200px;
+      margin-left: 0;
+    }
+	  
+    .back-link {
+      font-size: 13px;
+      color: #757575;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      gap: 4px;
+    }
+
+    .menu-toggle div {
+      width: 20px;
+      height: 2px;
+      background: #888;
+    }
+
+	 .custom-line {
+  height: 1.5px;
+  background-color: #9F9F9F;
+  width: 75vw;    
+  max-width: 1200px;
+  margin-top: 2rem ;
+  margin-bottom: 2rem ;
+}
+	 .custom-line2 {
+  height: 1.2px;
+  background-color: #CACACA;
+  width: 75vw;    
+  max-width: 1200px;
+  margin-top: 2rem ;
+  margin-bottom: 2rem ;
+}
+	  
+    @media (max-width: 1024px) {
+      .menu {
+        gap: 3rem;
+      }
+    }
+
+    @media (max-width: 900px) {
+      .menu {
+        gap: 2rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .menu {
+        display: none;
+        flex-direction: column;
+        background: var(--bg-color);
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1.5rem 0;
+        gap: 1.5rem;
+      }
+
+      .menu.active {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: flex;
+      }
+
+      .menu-wrapper {
+        justify-content: space-between;
+      }
+
+      .project-title {
+        font-size: 17px;
+      }
+
+      .project-description {
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">
+        <a href="index.html#Profile"><img src="taekun_logo.png" alt="logo" /></a>
+      </div>
+      <div class="menu-wrapper">
+        <div class="menu-toggle" onclick="toggleMenu()">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="menu" id="navMenu">
+          <a href="index.html#Profile">PROFILE</a>
+          <a href="design.html">DESIGN</a>
+          <a href="video.html">VIDEO</a>
+          <a href="marketing.html">MARKETING</a>
+          <a href="casestudy.html">CASE STUDY</a>
+          <button class="lang-switch" onclick="location.href='index_en.html'">ENG</button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="h2">PROJECTS</div>
+ </section>
+
+	<section class="project-gallery">
+      <img src="assets/images/design/garam/logo3.jpeg" alt="ART POSTER SERIES" class="project-image" />
+
+      <h2 class="project-title">LOGO DESIGN - Garam Project, VJ Studio</h2>
+
+      <div class="project-description">
+      VJ 스튜디오, 가람 프로젝트, ”garam project”의 로고 프로젝트를 진행했습니다.<br> 
+명함, 팀복, 스크린 등 온・오프라인의 다양한 환경을 고려하며 회사의 아이덴티티를 적용했습니다.</div>
+		
+<div style="width: 80vw; max-width: 1200px; margin-left: 0; text-align: center; padding-bottom: 2rem;">
+  <img src="assets/images/design/garam/logo2.png" alt="project-image1" class="project-image"  />
+</div>
+		
+		<div class="custom-line"></div>
+		
+		<div class="project-title2"> Brand Logo </div>
+
+		
+ <div style="width: 55vw; max-width: 1200px; margin-left: 0; text-align: center; padding-top: 5rem; padding-bottom: 8rem;">
+  <img src="assets/images/design/garam/logo4.png" alt="project-image" style="width: 70%; height: auto;" />
+</div>	
+		
+<div class="project-title2"> Design Concept </div>
+		
+<div class="project-description">
+	<p>영상의 특징인 "흐른다"와 공연의 특징인 "젊은", "역동성"을 강조했습니다. <br>타입 로고는 모던함과 젊음의 느낌을 전달할 수 있는 산세리프 서체로 제작했습니다. </p></div>
+		
+<div style="width: 55vw; max-width: 1200px; margin-left: 0; text-align: center; padding-bottom: 4rem;">
+<img src="assets/images/design/garam/logo_pro_2.png" alt="project-image" style="width: 55%; height: auto;" />
+</div>
+		
+	<div style="width: 55vw; max-width: 1200px; margin-left: 0; text-align: center; padding-bottom: 4rem;">
+  <img src="assets/images/design/garam/logo_pro_3.png" alt="project-image" style="width: 80%; height: auto;" />
+</div>	 
+		
+<div class="project-title2"> Design Concept </div>
+
+<div class="project-description">
+  <p> 실시간으로 영상을 믹싱・연출하는 VJ의 특성을 고려했습니다. <br>영상의 특성인 "흐른다"와 공연의 특징인 "역동성"과 "젊음"를 키워드로 로고 작업을 진행했습니다.</p>
+</div>
+		
+  <div style="width: 55vw; max-width: 1200px; margin-left: 0; text-align: center; padding-top: 2rem; padding-bottom: 3.5rem;">
+  <img src="assets/images/design/garam/logo_pro_1.png" alt="project-image1" style="width: 75%; height: auto;" /> </div>
+		
+<!--
+		<div style="width: 80vw; max-width: 1200px; margin-left: 0; text-align: center; padding-bottom: 2rem;">
+  <img src="assets/images/design/yohji/projcet4.jpg" alt="project-image1" style="width: 65%; height: auto;" />
+</div><div style="width: 80vw; max-width: 1200px; margin-left: 0; text-align: center; padding-bottom: 2rem;">
+  <img src="assets/images/design/yohji/projcet2.jpg" alt="project-image1" style="width: 65%; height: auto;" />
+</div>
+		-->
+		
+		<div class="project-description2">
+		Client work<br>
+		02.2020 - 08.2020<br>
+		Tool : Photoshop, Illustrator, Lightroom
+		</div>
+    
+      <div class="back-link" onclick="history.back()">← back previous page</div>
+    </section>
+	
+<footer style="text-align: center; margin-top: 4rem; padding: 2rem 0; font-size: 13px; color: #999;">
+  <div>© 2025 Taekun Kim. All rights reserved.</div>
+  <div><a href="mailto:taekun.kim95@gmil.com" style="color: #999; text-decoration: underline;">taekun.kim95@gmil.com</a></div>
+</footer>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('navMenu');
+      menu.classList.toggle('active');
+    }
+  </script>
+</body>
+</html>

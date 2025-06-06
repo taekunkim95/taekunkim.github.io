@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
   <title>My Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
@@ -37,7 +38,7 @@
     }
 
     .logo {
-      margin-bottom: 1.5rem;
+      margin-bottom: 2rem;
       margin-top: 0.6rem;
     }
 
@@ -61,13 +62,12 @@
       flex-wrap: nowrap;
       align-items: center;
       transition: gap 0.3s, font-size 0.3s;
-      margin-top: 0.5rem;
     }
 
     .menu a {
       text-decoration: none;
       color: #757575;
-      font-weight: 350!important;
+      font-weight: 350 !important;
       font-size: 12px;
       transition: color 0.2s;
       white-space: nowrap;
@@ -76,7 +76,7 @@
     .menu a:hover {
       color: #000000;
     }
-	  
+
     .menu-toggle {
       display: none;
       flex-direction: column;
@@ -89,7 +89,7 @@
       height: 2px;
       background-color: #333;
     }
-	  
+
     .lang-switch {
       font-size: 11px;
       background: none;
@@ -121,7 +121,7 @@
       margin-right: auto;
     }
 
-    .hero video {
+    .hero-video {
       width: 95%;
       height: auto;
       max-width: 1000px;
@@ -129,11 +129,19 @@
       display: block;
       margin-top: 20px;
       margin-bottom: 80px;
-	  border: none;
+      border: none;
+    }
+
+    .hero-image {
+      display: none;
+      width: 95%;
+      height: auto;
+      max-width: 1000px;
+      margin-top: 20px;
+      margin-bottom: 80px;
     }
 
     h2 {
-      font-family: 'Inter', sans-serif !important;
       font-weight: 400;
       font-size: 16px;
       margin-bottom: 0.8rem;
@@ -141,7 +149,6 @@
     }
 
     h3 {
-      font-family: 'Inter', sans-serif !important;
       font-weight: 500;
       font-size: 14px;
       margin-bottom: 0.8rem;
@@ -149,7 +156,6 @@
     }
 
     p {
-      font-family: 'Inter', sans-serif !important;
       line-height: 1.7;
       font-size: 12px;
       font-weight: 350 !important;
@@ -190,8 +196,6 @@
       font-weight: 500;
       color: #444;
     }
-	  
-	  
 
     @media (max-width: 1024px) {
       .menu {
@@ -231,9 +235,15 @@
       .menu-wrapper {
         justify-content: space-between;
       }
+
+      .hero-video {
+        display: none;
+      }
+
+      .hero-image {
+        display: block;
+      }
     }
-	  
-	  
   </style>
 </head>
 <body>
@@ -244,38 +254,40 @@
           <img src="taekun_logo.png" alt="logo" />
         </a>
       </div>
-
- <div class="menu-wrapper">
-  <div class="menu-toggle" onclick="toggleMenu()">
-    <div></div>
-    <div></div>
-    <div></div>
-  </div>
-  <div class="menu" id="navMenu">
-    <a href="#Profile">PROFILE</a>
-    <a href="design.html">DESIGN</a>
-    <a href="video.html">VIDEO</a>
-    <a href="marketing.html">MARKETING</a>
-    <a href="casestudy.html">CASE STUDY</a>
-    <button class="lang-switch" onclick="location.href='index.html'">KOR</button>
-  </div>
-</div>
-
+      <div class="menu-wrapper">
+        <div class="menu-toggle" onclick="toggleMenu()">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="menu" id="navMenu">
+          <a href="#Profile">PROFILE</a>
+          <a href="design.html">DESIGN</a>
+          <a href="video.html">VIDEO</a>
+          <a href="marketing.html">MARKETING</a>
+          <a href="casestudy.html">CASE STUDY</a>
+          <button class="lang-switch" onclick="location.href='index.html'">KOR</button>
+        </div>
+      </div>
     </nav>
   </header>
 
   <section class="hero" id="top">
-    <video autoplay loop playsinline muted>
+    <!-- 데스크탑: 비디오 -->
+    <video class="hero-video" autoplay loop playsinline muted>
       <source src="portfolio.mp4" type="video/mp4" />
-      <p>Your browser does not support the video.</p>
+      <p>브라우저가 비디오를 지원하지 않습니다.</p>
     </video>
+
+    <!-- 모바일: 이미지 -->
+    <img src="portfolio_12.png" alt="Portfolio Intro" class="hero-image" />
   </section>
 
   <section id="Profile">
     <h2>Profile</h2>
     <div class="profile-container">
       <div class="profile-left">
-        <img src="profile.jpg" alt="Profile Photo" style="width: 88%; height: auto; border-radius: 0; object-fit: cover; " />
+        <img src="profile2.png" alt="Profile Photo" style="width: 88%; height: auto; object-fit: cover;" />
       </div>
       <div class="profile-right">
         <h3>Taekun Kim</h3>
@@ -328,18 +340,21 @@
     </div>
   </section>
 	
+<footer style="text-align: center; margin-top: 4rem; padding: 2rem 0; font-size: 13px; color: #999;">
+  <div>© 2025 Taekun Kim. All rights reserved.</div>
+  <div><a href="mailto:taekun.kim95@gmil.com" style="color: #999; text-decoration: underline;">taekun.kim95@gmil.com</a></div>
+</footer>
+	
   <script>
     function toggleLang() {
       const btn = document.querySelector('.lang-switch');
       btn.textContent = btn.textContent === 'ENG' ? 'KOR' : 'ENG';
     }
 
-     function toggleMenu() {
-     const menu = document.getElementById('navMenu');
-  menu.classList.toggle('active');
-}
-
+    function toggleMenu() {
+      const menu = document.getElementById('navMenu');
+      menu.classList.toggle('active');
+    }
   </script>
-
 </body>
 </html>

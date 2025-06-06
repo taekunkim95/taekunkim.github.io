@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>ART POSTER SERIES 1</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-color: #fcfcfc;
+      --text-color: #222;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      color: var(--text-color);
+      background-color: var(--bg-color);
+      scroll-behavior: smooth;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: var(--bg-color);
+      z-index: 1000;
+    }
+
+    nav {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 1.2rem 1.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .logo {
+      margin-bottom: 2rem;
+      margin-top: 0.6rem;
+    }
+
+    .logo img {
+      width: 80px;
+      height: auto;
+      cursor: pointer;
+    }
+
+    .menu-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      gap: 1rem;
+    }
+
+    .menu {
+      display: flex;
+      gap: 5rem;
+      flex-wrap: nowrap;
+      align-items: center;
+    }
+
+    .menu a {
+      text-decoration: none;
+      color: #757575;
+      font-weight: 350;
+      font-size: 12px;
+      transition: color 0.2s;
+    }
+
+    .menu a:hover {
+      color: #000000;
+    }
+
+    .lang-switch {
+      font-size: 11px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: #757575;
+      font-weight: 200;
+    }
+
+    section {
+      padding: 10px 40px 10px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .hero {
+      padding-top: 165px;
+      text-align: left;
+    }
+
+    .h2 {
+      font-weight: 400;
+      font-size: 16px;
+      color: #757575;
+      margin-bottom: 2.2rem;
+      line-height: 1.6;
+      max-width: 700px;
+      margin-right: auto;
+    }
+
+    .project-gallery {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0rem;
+	  padding-top: 0px;
+      padding-bottom: 100px;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+
+    .project-image {
+      width: 75vw;
+      max-width: 1200px;
+      height: auto;
+      display: block;
+      margin: 0 auto 0rem auto; /* 이미지 아래 간격 줄임, 중앙 정렬 유지 */
+	  margin-bottom: 0rem;
+    }
+
+    .project-title {
+      margin-top: 2rem;
+      margin-bottom: 1.5rem;
+      font-size: 18px;
+      font-weight: 500;
+      color: #757575;
+      max-width: 1200px;
+      text-align: left;
+      width: 75vw;
+      margin-left: 0;
+    }
+
+	 .project-title2 {
+      margin-top: 0;
+      margin-bottom: 1.5rem;
+      font-size: 16px;
+      font-weight: 500;
+      color: #757575;
+      max-width: 1200px;
+      text-align: left;
+      width: 75vw;
+      margin-left: 0;
+    }
+
+	  
+    .project-description {
+      font-size: 14px;
+      line-height: 1.7;
+      color: #444;
+      margin-bottom: 45px;
+      width: 75vw;
+      max-width: 1200px;
+      margin-left: 0;
+    }
+	  
+	  .project-description2 {
+      margin-top: 2rem;
+	  margin-bottom: 2rem;
+	  font-size: 12px;
+      line-height: 1.7;
+      color: #757575;
+      margin-bottom: 45px;
+      width: 75vw;
+      max-width: 1200px;
+      margin-left: 0;
+    }
+
+    .back-link {
+      font-size: 13px;
+      color: #757575;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      gap: 4px;
+    }
+
+    .menu-toggle div {
+      width: 20px;
+      height: 2px;
+      background: #888;
+    }
+
+    @media (max-width: 1024px) {
+      .menu {
+        gap: 3rem;
+      }
+    }
+
+    @media (max-width: 900px) {
+      .menu {
+        gap: 2rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .menu {
+        display: none;
+        flex-direction: column;
+        background: var(--bg-color);
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1.5rem 0;
+        gap: 1.5rem;
+      }
+
+      .menu.active {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: flex;
+      }
+
+      .menu-wrapper {
+        justify-content: space-between;
+      }
+
+      .project-title {
+        font-size: 17px;
+      }
+
+      .project-description {
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">
+        <a href="index.html#Profile"><img src="taekun_logo.png" alt="logo" /></a>
+      </div>
+      <div class="menu-wrapper">
+        <div class="menu-toggle" onclick="toggleMenu()">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="menu" id="navMenu">
+          <a href="index.html#Profile">PROFILE</a>
+          <a href="design.html">DESIGN</a>
+          <a href="video.html">VIDEO</a>
+          <a href="marketing.html">MARKETING</a>
+          <a href="casestudy.html">CASE STUDY</a>
+          <button class="lang-switch" onclick="location.href='index_en.html'">ENG</button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="h2">PROJECTS</div>
+ </section>
+
+	<section class="project-gallery">
+      <img src="assets/images/design/issey/projcet_1_thumbnail_1.png" alt="ART POSTER SERIES" class="project-image" />
+
+      <h2 class="project-title">ART POSTER SERIES 2 - Issey Miyake, Homme Plisse Haru Print </h2>
+
+      <div class="project-description">
+       패션 브랜드의 아이덴티티와 시각적 요소를 서칭한 후, 시각적으로 재해석한 아트 포스터 개인 작업입니다.<br>
+	   시각적인 후킹을 우선순위로 브랜드의 이미지, 로고, 다양한 폰트를 사용해 한장의 이미지들로 제작했습니다. <br>
+작업물들은 콘텐츠와 오프라인 환경을 고려해 제작되었습니다.</div>
+		
+<div style="width: 80vw; max-width: 1200px; margin-left: 0; text-align: center; padding-bottom: 2rem;">
+  <img src="assets/images/design/issey/projcet_1_thumbnail_2.png" alt="project-image1" class="project-image"  />
+</div>
+		
+<div class="project-title2"> Project Overview </div>
+		
+<div class="project-description">
+디자이너 "이세이 미야케"는 일본을 대표하는 1세대 디자이너입니다.<br>
+이세이 미야케 옴므 플리스 16F/W HARU 컬렉션을 베이스로 아트 포스터를 제작했습니다. 
+<br><br>
+ 일본의 아티스트들에서 영감을 받아 제작된 컬렉션이기에 <br> 일본을 상징하는 붉은 원을 사용하고 디자인 요소로 일본어 타이포를 활용해 비주얼을 완성했습니다.</div>
+		
+		<div style="width: 80vw; max-width: 1200px; margin-left: 0; text-align: center; padding-bottom: 2rem;">
+  <img src="assets/images/design/issey/issey2.jpg" alt="project-image1" style="width: 65%; height: auto;" />
+</div>
+		
+<div style="width: 80vw; max-width: 1200px; margin-left: 0; text-align: center; padding-bottom: 2rem;">
+  <img src="assets/images/design/issey/issey1.jpg" alt="project-image" style="width: 65%; height: auto;" />
+</div><div style="width: 80vw; max-width: 1200px; margin-left: 0; text-align: center; padding-bottom: 2rem;">
+  <img src="assets/images/design/issey/issey3.jpg" alt="project-image1" style="width: 65%; height: auto;" />
+</div>
+		
+	<div class="project-description2">
+		Personal work<br>
+		02.2020 - 08.2020<br>
+		Tool : Photoshop, Illustrator, Lightroom
+		</div>
+    
+      <div class="back-link" onclick="history.back()">← back previous page</div>
+    </section>
+
+<footer style="text-align: center; margin-top: 4rem; padding: 2rem 0; font-size: 13px; color: #999;">
+  <div>© 2025 Taekun Kim. All rights reserved.</div>
+  <div><a href="mailto:taekun.kim95@gmil.com" style="color: #999; text-decoration: underline;">taekun.kim95@gmil.com</a></div>
+</footer>
+
+<script>
+    function toggleMenu() {
+      const menu = document.getElementById('navMenu');
+      menu.classList.toggle('active');
+    }
+  </script>
+</body>
+</html>
