@@ -86,7 +86,7 @@
     }
 
     section {
-      padding: 10px 40px 10px;
+      padding: 10px 40px 0px;
       max-width: 1200px;
       margin: 0 auto;
     }
@@ -152,9 +152,9 @@
 
 	  
     .project-description {
-      font-size: 14px;
+      font-size: 12px;
       line-height: 1.7;
-      color: #444;
+      color: #595959;
       margin-bottom: 45px;
       width: 75vw;
       max-width: 1200px;
@@ -164,7 +164,7 @@
 	  .project-description2 {
       margin-top: 2rem;
 	  margin-bottom: 2rem;
-	  font-size: 12px;
+	  font-size: 11px;
       line-height: 1.7;
       color: #757575;
       margin-bottom: 45px;
@@ -178,6 +178,7 @@
       color: #757575;
       text-decoration: underline;
       cursor: pointer;
+	  margin-top: 20px;
     }
 
     .menu-toggle {
@@ -192,6 +193,18 @@
       height: 2px;
       background: #888;
     }
+	  
+	  footer {
+  text-align: center;
+  margin-top: 0rem;
+  padding: 2rem 0;
+  font-size: 13px;
+  color: #999;
+}
+footer a {
+  color: #999;
+  text-decoration: underline;
+}
 
     @media (max-width: 1024px) {
       .menu {
@@ -230,13 +243,45 @@
         justify-content: space-between;
       }
 
+    
       .project-title {
         font-size: 14px;
+		padding-right: 20px;
       }
-
+		
+      .project-title2 {
+        font-size: 12px;
+		padding-right: 20px;
+      }
+		
       .project-description {
         font-size: 10px;
+        padding-right: 20px;
+		margin-bottom: 30px;
       }
+		
+	  .project-description2 {
+	padding-right: 20px;
+    font-size: 9px;
+		}
+		
+  .project-image {
+    width: 100vw; /* 화면 거의 꽉 채우기 */
+    max-width: none; /* 최대폭 제한 해제 */
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* 이미지가 들어있는 부모 요소의 패딩도 줄여서 꽉 차 보이게 하기 */
+  .project-gallery {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+	
+		
+  		  footer {
+    font-size: 11px;
+  }
     }
   </style>
 </head>
@@ -244,7 +289,7 @@
   <header>
     <nav>
       <div class="logo">
-        <a href="index.html#Profile"><img src="taekun_logo.png" alt="logo" /></a>
+        <a href="index.html#top"><img src="taekun_logo.png" alt="logo" /></a>
       </div>
       <div class="menu-wrapper">
         <div class="menu-toggle" onclick="toggleMenu()">
@@ -253,7 +298,7 @@
           <div></div>
         </div>
         <div class="menu" id="navMenu">
-          <a href="index.html#Profile">PROFILE</a>
+          <a href="index.html#top">PROFILE</a>
           <a href="design.html">DESIGN</a>
           <a href="video.html">VIDEO</a>
           <a href="marketing.html">MARKETING</a>
@@ -278,7 +323,7 @@
 	   시각적인 후킹을 우선순위로 브랜드의 이미지, 로고, 다양한 폰트를 사용해 한장의 이미지들로 제작했습니다. <br>
 작업물들은 콘텐츠와 오프라인 환경을 고려해 제작되었습니다.</div>
 		
-<div style="width: 80vw; max-width: 1200px; margin-left: 0; text-align: center; padding-bottom: 2rem;">
+<div style="width: 100vw; max-width: 1200px; margin-left: 0; text-align: center; padding-bottom: 2rem;">
   <img src="assets/images/design/issey/projcet_1_thumbnail_2.png" alt="project-image1" class="project-image"  />
 </div>
 		
@@ -290,13 +335,13 @@
 <br><br>
  일본의 아티스트들에서 영감을 받아 제작된 컬렉션이기에 <br> 일본을 상징하는 붉은 원을 사용하고 디자인 요소로 일본어 타이포를 활용해 비주얼을 완성했습니다.</div>
 		
-		<div style="width: 80vw; max-width: 1200px; margin-left: 0; text-align: center; padding-bottom: 2rem;">
+		<div style="width: 100vw; max-width: 850px; margin-left: 0; text-align: center; padding-bottom: 2rem;">
   <img src="assets/images/design/issey/issey2.jpg" alt="project-image1" style="width: 65%; height: auto;" />
 </div>
 		
-<div style="width: 80vw; max-width: 1200px; margin-left: 0; text-align: center; padding-bottom: 2rem;">
+<div style="width: 100vw; max-width: 850px; margin-left: 0; text-align: center; padding-bottom: 2rem;">
   <img src="assets/images/design/issey/issey1.jpg" alt="project-image" style="width: 65%; height: auto;" />
-</div><div style="width: 80vw; max-width: 1200px; margin-left: 0; text-align: center; padding-bottom: 2rem;">
+</div><div style="width: 100vw; max-width: 850px; margin-left: 0; text-align: center; padding-bottom: 2rem;">
   <img src="assets/images/design/issey/issey3.jpg" alt="project-image1" style="width: 65%; height: auto;" />
 </div>
 		
@@ -309,9 +354,9 @@
       <div class="back-link" onclick="history.back()">← back previous page</div>
     </section>
 
-<footer style="text-align: center; margin-top: 4rem; padding: 2rem 0; font-size: 13px; color: #999;">
+<footer style="footer;">
   <div>© 2025 Taekun Kim. All rights reserved.</div>
-  <div><a href="mailto:taekun.kim95@gmil.com" style="color: #999; text-decoration: underline;">taekun.kim95@gmil.com</a></div>
+  <div><a href="mailto:taekun.kim95@gmail.com" style="color: #999; text-decoration: underline;">taekun.kim95@gmail.com</a></div>
 </footer>
 
 <script>

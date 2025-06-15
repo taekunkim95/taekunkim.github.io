@@ -6,7 +6,7 @@
   <meta name="robots" content="noindex, nofollow" />
   <title>ART POSTER SERIES 1</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <style>
+<style>
     :root {
       --bg-color: #fcfcfc;
       --text-color: #222;
@@ -86,7 +86,7 @@
     }
 
     section {
-      padding: 10px 40px 10px;
+      padding: 10px 40px 0px;
       max-width: 1200px;
       margin: 0 auto;
     }
@@ -126,6 +126,19 @@
 	  margin-bottom: 0rem;
     }
 
+.project-image2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2열 */
+  gap: 10px; /* 이미지 간 간격 */
+  width: 75vw;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.project-image2 img {
+  width: 100%;
+  height: auto;
+}
     .project-title {
       margin-top: 2rem;
       margin-bottom: 1.5rem;
@@ -139,8 +152,8 @@
     }
 
 	 .project-title2 {
-      margin-top: 0;
-      margin-bottom: 10px;
+      margin-top: 2.5rem;
+      margin-bottom: 3px;
       font-size: 16px;
       font-weight: 500;
       color: #757575;
@@ -152,7 +165,7 @@
 
 	  
     .project-description {
-      font-size: 14px;
+      font-size: 12px;
       line-height: 1.7;
       color: #595959;
       margin-bottom: 45px;
@@ -164,7 +177,7 @@
 	 .project-description2 {
       margin-top: 2rem;
 	  margin-bottom: 2rem;
-	  font-size: 12px;
+	  font-size: 11px;
       line-height: 1.7;
       color: #757575;
       margin-bottom: 45px;
@@ -178,6 +191,7 @@
       color: #757575;
       text-decoration: underline;
       cursor: pointer;
+	  margin-top: 20px;
     }
 
     .menu-toggle {
@@ -194,9 +208,9 @@
     }
 
 	 .custom-line {
-  height: 1.5px;
-  background-color: #9F9F9F;
-  width: 75vw;    
+  height: 10px;
+  background-color: #FFFFFF;
+  width: 100vw;    
   max-width: 1200px;
   margin-top: 2rem ;
   margin-bottom: 2rem ;
@@ -209,6 +223,19 @@
   margin-top: 2rem ;
   margin-bottom: 2rem ;
 }
+	  
+	  	  footer {
+  text-align: center;
+  margin-top: 0rem;
+  padding: 2rem 0;
+  font-size: 13px;
+  color: #999;
+}
+footer a {
+  color: #999;
+  text-decoration: underline;
+}
+
 	  
     @media (max-width: 1024px) {
       .menu {
@@ -249,19 +276,73 @@
 
       .project-title {
         font-size: 14px;
+		padding-right: 20px;
       }
-
+		
+      .project-title2 {
+        font-size: 12px;
+		padding-right: 20px;
+		margin-top: 0px;
+      }
+		
       .project-description {
         font-size: 10px;
+        padding-right: 20px;
+		margin-bottom: 30px;
       }
+		
+	  .project-description2 {
+	padding-right: 20px;
+    font-size: 9px;
+		}
+		
+  .project-image {
+    width: 100vw; /* 화면 거의 꽉 채우기 */
+    max-width: none; /* 최대폭 제한 해제 */
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* 이미지가 들어있는 부모 요소의 패딩도 줄여서 꽉 차 보이게 하기 */
+  .project-gallery {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+		
+ .custom-line {
+  height: 3px;
+  background-color: #FFFFFF;
+  width: 100vw;    
+  margin-top: 2rem ;
+  margin-bottom: 2rem ;
+}
+		
+.custom-line2 {
+  height: 1.2px;
+  background-color: #CACACA;
+  width: 100vw;    
+  margin-top: 2rem ;
+  margin-bottom: 2rem ;
+}
+		
+		
+	.project-image2 {
+ grid-template-columns: 1fr; /* 한 줄 */
+ width: 100vw;
+  }
+				 
+			footer {
+    font-size: 11px;
+  }
+		
     }
-  </style>
+ </style>
 </head>
 <body>
   <header>
     <nav>
       <div class="logo">
-        <a href="index.html#Profile"><img src="taekun_logo.png" alt="logo" /></a>
+        <a href="index.html#top"><img src="taekun_logo.png" alt="logo" /></a>
       </div>
       <div class="menu-wrapper">
         <div class="menu-toggle" onclick="toggleMenu()">
@@ -270,7 +351,7 @@
           <div></div>
         </div>
         <div class="menu" id="navMenu">
-          <a href="index.html#Profile">PROFILE</a>
+          <a href="index.html#top">PROFILE</a>
           <a href="design.html">DESIGN</a>
           <a href="video.html">VIDEO</a>
           <a href="marketing.html">MARKETING</a>
@@ -292,42 +373,85 @@
 
       <div class="project-description">
       VJ 스튜디오, 가람 프로젝트, ”garam project”의 로고 프로젝트를 진행했습니다.<br> 
-명함, 팀복, 스크린 등 온・오프라인의 다양한 환경을 고려하며 회사의 아이덴티티를 적용했습니다.</div>
+명함, 유니폼, 스크린 등 온・오프라인의 다양한 환경을 고려하며 회사의 아이덴티티를 적용했습니다.</div>
 		
-<div style="width: 80vw; max-width: 1200px; margin-left: 0; text-align: center; padding-bottom: 2rem;">
+<div style="width: 100vw; max-width: 1200px; margin-left: 0; text-align: center; padding-bottom: 2rem;">
   <img src="assets/images/design/garam/logo2.png" alt="project-image1" class="project-image"  />
 </div>
 		
+		<!--
 		<div class="custom-line"></div>
+		-->
 		
 		<div class="project-title2"> Brand Logo </div>
-
-		
- <div style="width: 55vw; max-width: 1200px; margin-left: 0; text-align: center; padding-top: 5rem; padding-bottom: 8rem;">
+ <div style="width: 90vw; max-width: 550px; margin-left: 0; text-align: center; padding-top: 2.5rem; padding-bottom: 4rem;">
   <img src="assets/images/design/garam/logo4.png" alt="project-image" style="width: 70%; height: auto;" />
 </div>	
+		<div class="project-description">
+	<p>GARAM PROJECT라는 텍스트를 중심으로 시각적으로 강렬하고 독창적인 인상을 전달합니다.<br>
+스튜디오의 진취적이고 실험적인 프로젝트를 추구한다는 철학을 반영하여 반영하였습니다. </p></div>
 		
-<div class="project-title2"> Design Concept </div>
+
 		
-<div class="project-description">
-	<p>영상의 특징인 "흐른다"와 공연의 특징인 "젊은", "역동성"을 강조했습니다. <br>타입 로고는 모던함과 젊음의 느낌을 전달할 수 있는 산세리프 서체로 제작했습니다. </p></div>
+
 		
-<div style="width: 55vw; max-width: 1200px; margin-left: 0; text-align: center; padding-bottom: 4rem;">
-<img src="assets/images/design/garam/logo_pro_2.png" alt="project-image" style="width: 55%; height: auto;" />
+<div class="project-title2"> Design Concept </div>		
+		
+<div style="width: 55vw; max-width: 1200px; margin-left: 0; text-align: center; padding-top: 2rem; padding-bottom: 2rem;">
+  <img src="assets/images/design/garam/logo_pro_1.png" alt="project-image1" style="width: 65%; height: auto;" /> </div>
+		
+	<div class="project-description">
+	<p>VJ 스튜디오의 특성을 살려, 영상의 “흐른다”라는 이미지와 “젊음”, “역동성”을 시각화하였습니다. </p>
+	</div>
+		
+
+		
+<div class="project-title2"> Color </div>
+		
+	  <div style="width: 100vw; max-width: 4000px; margin-left: 0; text-align: center; padding-bottom: 0.5rem; padding-top: 1rem;">
+<img src="assets/images/design/garam/logo_color.png" alt="project-image" style= "width: 100%;" />
+</div>
+	<div class="project-description">
+	<p>BLUE : 신뢰감과 전문성, 그리고 기술적인 느낌을 전달합니다. <br>
+		BLACK : 블루와의 강한 대비를 통해 가독성과 시각적 임펙트를 표현합니다. </p>
+	</div>
+		
+
+		
+		
+<div class="project-title2"> Typography & Pattern </div>
+		
+		<div style="width: 100vw; max-width: 1200px; margin-left: 0; text-align: center; padding-bottom: 2.5rem; padding-top: 2.5rem;">
+<img src="assets/images/design/garam/logo_pro_5.png" alt="project-image" style="width: 70%; height: auto;" />
+			
 </div>
 		
-	<div style="width: 55vw; max-width: 1200px; margin-left: 0; text-align: center; padding-bottom: 4rem;">
-  <img src="assets/images/design/garam/logo_pro_3.png" alt="project-image" style="width: 80%; height: auto;" />
+		
+	<div class="project-description">
+	<p>강한 임펙트와 현대적인 감각을 전달하기 위해 볼드하고 직선적인 산세리프 서체를 사용했습니다.<br>
+		타이포 상하단에 기울기를 주어 시각적인 역동성을 부여했습니다. <br>이를 도트 원을 벗어나게 디자인하여 프레임을 넘는 자유로움을 표현했습니다. </p> </div>
+		
+		<div style="width: 100vw; max-width: 1200px; margin-left: 0; text-align: center; padding-bottom: 2rem;">
+  <img src="assets/images/design/garam/logo_pro_3.png" alt="project-image" style="width: 30%; height: auto;" />
 </div>	 
 		
-<div class="project-title2"> Design Concept </div>
-
 <div class="project-description">
-  <p> 실시간으로 영상을 믹싱・연출하는 VJ의 특성을 고려했습니다. <br>영상의 특성인 "흐른다"와 공연의 특징인 "역동성"과 "젊음"를 키워드로 로고 작업을 진행했습니다.</p>
-</div>
+ <p> 블루 컬러의 도트 패턴을 사용해 디지털적인 느낌을 부여했습니다. <br>시각적으로 활기찬 느낌을 주고 실험성, 창의성, 젊음을 상징합니다.<br>또한 자유로운 형태의 타이포의 중심을 잡았습니다.
+<br><br>
+	두가지 요소를 결합해 2D이지만 입체적인 느낌을 만들어 내고,자유로운 느낌을 전달했습니다. </p>
+	</div>
 		
-  <div style="width: 55vw; max-width: 1200px; margin-left: 0; text-align: center; padding-top: 2rem; padding-bottom: 3.5rem;">
-  <img src="assets/images/design/garam/logo_pro_1.png" alt="project-image1" style="width: 75%; height: auto;" /> </div>
+<div class= "project-image2">
+  <img src="assets/images/design/garam/shirt_mockup.jpg" alt="project-image"/>  <img src="assets/images/design/garam/logo31.jpg" alt="project-image" />
+ <img src="assets/images/design/garam/logo4.jpg" alt="project-image" />  
+ <img src="assets/images/design/garam/logo5.jpg" alt="project-image" />
+</div>	 
+
+		
+	
+		
+		
+  
 		
 <!--
 		<div style="width: 80vw; max-width: 1200px; margin-left: 0; text-align: center; padding-bottom: 2rem;">
@@ -339,23 +463,24 @@
 		
 		<div class="project-description2">
 		Client work<br>
-		02.2020 - 08.2020<br>
-		Tool : Photoshop, Illustrator, Lightroom
+		03.2023 - 04.2023<br>
+		Tool : Photoshop, Illustrator
 		</div>
     
       <div class="back-link" onclick="history.back()">← back previous page</div>
     </section>
 	
-<footer style="text-align: center; margin-top: 4rem; padding: 2rem 0; font-size: 13px; color: #999;">
+<footer style="footer;">
   <div>© 2025 Taekun Kim. All rights reserved.</div>
-  <div><a href="mailto:taekun.kim95@gmil.com" style="color: #999; text-decoration: underline;">taekun.kim95@gmil.com</a></div>
+  <div><a href="mailto:taekun.kim95@gmail.com" style="color: #999; text-decoration: underline;">taekun.kim95@gmail.com</a></div>
 </footer>
 
-  <script>
+<script>
     function toggleMenu() {
       const menu = document.getElementById('navMenu');
       menu.classList.toggle('active');
     }
   </script>
+
 </body>
 </html>

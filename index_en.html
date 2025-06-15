@@ -80,16 +80,16 @@
     .menu-toggle {
       display: none;
       flex-direction: column;
-      gap: 5px;
       cursor: pointer;
+      gap: 4px;
     }
 
     .menu-toggle div {
-      width: 24px;
+      width: 20px;
       height: 2px;
-      background-color: #333;
+      background: #888;
     }
-
+	  
     .lang-switch {
       font-size: 11px;
       background: none;
@@ -196,6 +196,55 @@
       font-weight: 500;
       color: #444;
     }
+	  
+	  .profile-text {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #333;
+}
+	  
+	  #project-list p2 {
+  font-size: 12px;
+  font-weight: 350;
+  color: #444;
+  line-height: 1.6;
+}
+
+	  #Profile2 {
+  margin-top: -2rem;
+}
+
+#project-list p2 {
+  display: block;
+  margin-bottom: 1.2rem;
+}
+
+.toggle-title {
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  font-size: 14px;
+  color: #444;
+}
+
+#toggle-icon {
+  margin-left: 0.5rem;
+  font-size: 14px;
+position: relative;
+  top: -1.4px; /* 숫자는 조절해가며 맞추기 */
+}
+	  
+footer {
+  text-align: center;
+  margin-top: 2rem;
+  padding: 2rem 0;
+  font-size: 13px;
+  color: #999;
+}
+footer a {
+  color: #999;
+  text-decoration: underline;
+}
 
     @media (max-width: 1024px) {
       .menu {
@@ -212,6 +261,12 @@
     }
 
     @media (max-width: 768px) {
+		
+				 .project-item {
+    font-size: 11px!important; /* 기존이 11px이라면 1px 줄이기 */
+  }
+		
+		
       .menu {
         display: none;
         flex-direction: column;
@@ -243,6 +298,34 @@
       .hero-image {
         display: block;
       }
+		
+				h2 {
+    font-size: 14px;
+  }
+
+  h3 {
+    font-size: 13px;
+  }
+
+  p,
+  .intro-text,
+  .p2 {
+    font-size: 11px;
+    line-height: 1.6; /* 기존 가독성 유지 */
+  }
+
+  .menu a {
+    font-size: 11px;
+  }
+
+  .lang-switch {
+    font-size: 10px;
+  }
+
+  footer {
+    font-size: 11px;
+  }
+		
     }
   </style>
 </head>
@@ -261,7 +344,7 @@
           <div></div>
         </div>
         <div class="menu" id="navMenu">
-          <a href="#Profile">PROFILE</a>
+          <a href="#top">PROFILE</a>
           <a href="design.html">DESIGN</a>
           <a href="video.html">VIDEO</a>
           <a href="marketing.html">MARKETING</a>
@@ -292,7 +375,7 @@
       <div class="profile-right">
         <h3>Taekun Kim</h3>
         <p><span class="soft-label">Date of Birth</span>: 1995.10.16 (Male)</p>
-        <p><span class="soft-label">Email</span>: taekun.kim95@gmil.com</p>
+        <p><span class="soft-label">Email</span>: taekun.kim95@gmail.com</p>
         <p><span class="soft-label">Phone</span>: (+82)10-9050-9380</p>
         <p><span class="soft-label">YouTube</span>: @PotbadMagazine</p>
         <p><span class="soft-label">Instagram</span>: @taegun.kim</p>
@@ -334,15 +417,67 @@
            <span class="soft-label">Others</span>: SketchUp</p>
 
         <h3 style="margin-top: 2rem;">Languages</h3>
-        <p><span class="soft-label">Japanese</span>: Business level<br>
-           <span class="soft-label">English</span>: Basic conversation</p>
+        <p><span class="soft-label">Korean</span>: Native level<br>
+		<span class="soft-label">Japanese</span>: Business level<br>
+        <span class="soft-label">English</span>: Basic conversation</p>
       </div>
-    </div>
+		
+		<div class="profile-section">
+    <h3 class="toggle-title" style="cursor:pointer;">Projects Involved In<span id="toggle-icon" style="margin-left:8px;">+</span></h3>
+    <div id="project-list" class="profile-text" style="display:none; margin-top: 1rem; line-height: 1.5;">
+<p class="p2"> <span class="soft-label">
+        Matin Kim Nagoya Pop-up</span> <br>Apr. 2024, NAGOYA, LACHIC
+<br>		  
+		  <span class="soft-label">Matin Kim Osaka Pop-up</span>
+		  <br>Feb. 2024, OSAKA, UMEDA HANKYU DEPARTMENT STORE
+<br>
+<span class="soft-label">Matin Kim Tokyo Pop-up</span><br>Oct. 2023, TOKYO, SHIBUYA PARCO
+<br>
+		  <span class="soft-label"> Vunque Osaka POP-up</span><br>Sep. 2024, OSAKA, UMEDA HANKYU
+<br>      
+		  <span class="soft-label">Andar Osaka Pop-up</span><br>Feb. 2024, OSAKA, UMEDA HANKYU
+		
+		<br>
+		
+<span class="soft-label">depound Nagoya Pop-up</span><br>Jun. 2024, NAGOYA, LACHIC
+		
+		<br>
+		
+<span class="soft-label">2aN Osaka @cosme Pop-up</span><br>Apr. 2024, OSAKA @cosme
+		
+		<br>
+		
+<span class="soft-label">2aN Tokyo @cosme Pop-up</span><br>Dec. 2023, TOKYO, HARAJUKU
+		
+		<br>
+		
+<span class="soft-label">Dermafirm Osaka @cosme Pop-up</span><br>May. 2024, OSAKA, @cosme
+		
+		<br>
+		<br>
+<span class="soft-label">X-mas Edge, Multi-brand Pop-up</span><br>
+          Dec. 2024, TOKYO, SHINJUKU ISETAN CENTER PARK/THE STAGE#2<br>
+	 <span class="soft-label">
+          Shinsegae Hyper Ground, Multi-brand Pop-up</span><br> Oct-Dec. 2024, OSAKA, UMEDA HANKYU PROMOTION SPACE 32
+		  
+		  <br><br>
+		  
+<span class="soft-label">SHINSEGAE HYPER GROUND RECEPTION PARTY</span><br>
+           Oct. 2024, TOKYO, TRUNK(HOTEL) CAT STREET<br>
+         <span class="soft-label"> Matin Kim launching party</span><br> Oct. 2023, TOKYO, OMOTESANDO<br>
+          <span class="soft-label">Vunque launching party</span><br> Oct. 2024, TOKYO, OMOTESANDO<br>
+         <span class="soft-label"> 2aN K-con event</span><br> May. 2024, CHIBA, MAKUHARI
+</p>
+
+   </div>
+  </div>
+ </div>
   </section>
+
 	
-<footer style="text-align: center; margin-top: 4rem; padding: 2rem 0; font-size: 13px; color: #999;">
+<footer style="footer">
   <div>© 2025 Taekun Kim. All rights reserved.</div>
-  <div><a href="mailto:taekun.kim95@gmil.com" style="color: #999; text-decoration: underline;">taekun.kim95@gmil.com</a></div>
+  <div><a href="mailto:taekun.kim95@gmail.com" style="color: #999; text-decoration: underline;">taekun.kim95@gmail.com</a></div>
 </footer>
 	
   <script>
@@ -355,6 +490,19 @@
       const menu = document.getElementById('navMenu');
       menu.classList.toggle('active');
     }
+	  
+	  
+  const toggleTitle = document.querySelector('.toggle-title');
+  const projectList = document.getElementById('project-list');
+  const toggleIcon = document.getElementById('toggle-icon');
+
+  toggleTitle.addEventListener('click', () => {
+    const isVisible = projectList.style.display === 'block';
+    projectList.style.display = isVisible ? 'none' : 'block';
+    toggleIcon.textContent = isVisible ? '+' : '−';
+  });
+	  
+	  
   </script>
 </body>
 </html>
