@@ -4,9 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="robots" content="noindex, nofollow" />
-  <title>ART POSTER SERIES 1</title>
+  <title>marketing 2</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <style>
+<style>
     :root {
       --bg-color: #fcfcfc;
       --text-color: #222;
@@ -126,6 +126,19 @@
 	  margin-bottom: 0rem;
     }
 
+.project-image2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2열 */
+  gap: 10px; /* 이미지 간 간격 */
+  width: 75vw;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.project-image2 img {
+  width: 100%;
+  height: auto;
+}
     .project-title {
       margin-top: 2rem;
       margin-bottom: 1.5rem;
@@ -139,8 +152,8 @@
     }
 
 	 .project-title2 {
-      margin-top: 0;
-      margin-bottom: 1.5rem;
+      margin-top: 2.5rem;
+      margin-bottom: 3px;
       font-size: 16px;
       font-weight: 500;
       color: #757575;
@@ -150,7 +163,8 @@
       margin-left: 0;
     }
 
-	  
+
+
     .project-description {
       font-size: 12px;
       line-height: 1.7;
@@ -160,7 +174,7 @@
       max-width: 1200px;
       margin-left: 0;
     }
-	  
+
 	 .project-description2 {
       margin-top: 2rem;
 	  margin-bottom: 2rem;
@@ -168,6 +182,16 @@
       line-height: 1.7;
       color: #757575;
       margin-bottom: 45px;
+      width: 75vw;
+      max-width: 1200px;
+      margin-left: 0;
+    }
+	
+    .project-description3 {
+      font-size: 11px;
+      line-height: 1.7;
+      color: #595959;
+      margin-bottom: 0px;
       width: 75vw;
       max-width: 1200px;
       margin-left: 0;
@@ -194,6 +218,39 @@
       background: #888;
     }
 
+	 .custom-line {
+  height: 10px;
+  background-color: #FFFFFF;
+  width: 100vw;    
+  max-width: 1200px;
+  margin-top: 2rem ;
+  margin-bottom: 2rem ;
+}
+	 .custom-line2 {
+  height: 1.2px;
+  background-color: #CACACA;
+  width: 75vw;    
+  max-width: 1200px;
+  margin-top: 2rem ;
+  margin-bottom: 2rem ;
+}
+	  
+	
+.video-container {
+  width: 75vw;        /* PC 기본 너비 */
+  max-width: 1200px;
+  margin: 1rem auto 3rem;
+}
+
+.video-container iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: none;
+  display: block;
+}
+
+
+	
 	  	  footer {
   text-align: center;
   margin-top: 0rem;
@@ -243,7 +300,7 @@ footer a {
       .menu-wrapper {
         justify-content: space-between;
       }
-		
+
       .project-title {
         font-size: 14px;
 		padding-right: 20px;
@@ -252,7 +309,9 @@ footer a {
       .project-title2 {
         font-size: 12px;
 		padding-right: 20px;
+		margin-top: 0px;
       }
+
 		
       .project-description {
         font-size: 10px;
@@ -265,6 +324,12 @@ footer a {
     font-size: 9px;
 		}
 		
+      .project-description3 {
+        font-size: 10px;
+        padding-right: 20px;
+		margin-bottom: 0px;
+      }
+				
   .project-image {
     width: 100vw; /* 화면 거의 꽉 채우기 */
     max-width: none; /* 최대폭 제한 해제 */
@@ -277,12 +342,40 @@ footer a {
     padding-left: 0px;
     padding-right: 0px;
   }
-		 
-	footer {
+		
+ .custom-line {
+  height: 3px;
+  background-color: #FFFFFF;
+  width: 100vw;    
+  margin-top: 2rem ;
+  margin-bottom: 2rem ;
+}
+		
+.custom-line2 {
+  height: 1.2px;
+  background-color: #CACACA;
+  width: 100vw;    
+  margin-top: 2rem ;
+  margin-bottom: 2rem ;
+}
+		
+		
+	.project-image2 {
+ grid-template-columns: 1fr; /* 한 줄 */
+ width: 100vw;
+  }
+	
+ .video-container {
+    width: 100vw;    /* 모바일에서는 화면 꽉 채우기 */
+    max-width: none; /* 최대 너비 제한 해제 */
+  }
+		
+			footer {
     font-size: 11px;
   }
+		
     }
-  </style>
+ </style>
 </head>
 <body>
   <header>
@@ -301,7 +394,7 @@ footer a {
           <a href="design.html">DESIGN</a>
           <a href="video.html">VIDEO</a>
           <a href="marketing.html">MARKETING</a>
-         <!-- <a href="casestudy.html">CASE STUDY</a> -->
+        <!--  <a href="casestudy.html">CASE STUDY</a> -->
           <button class="lang-switch" onclick="location.href='index_en.html'">ENG</button>
         </div>
       </div>
@@ -313,49 +406,107 @@ footer a {
  </section>
 
 	<section class="project-gallery">
-      <img src="assets/images/design/margiel/projcet_1_thumbnail_1.png" alt="ART POSTER SERIES" class="project-image" />
+      <img src="assets/images/marketing/vunque/projcet_thumbnail_2.jpg" alt="ART POSTER SERIES" class="project-image" />
 
-      <h2 class="project-title">ART POSTER SERIES 2 - Issey Miyake, Homme Plisse Haru Print </h2>
+      <h2 class="project-title">LAUNCHING PARTY - vunque, Omotesando</h2>
 
       <div class="project-description">
-       패션 브랜드의 아이덴티티와 시각적 요소를 서칭한 후, 시각적으로 재해석한 아트 포스터 개인 작업입니다.<br>
-	   시각적인 후킹을 우선순위로 브랜드의 이미지, 로고, 다양한 폰트를 사용해 한장의 이미지들로 제작했습니다. <br>
-작업물들은 콘텐츠와 오프라인 환경을 고려해 제작되었습니다.</div>
+      Vunque(분크)의 일본 런칭 파티는 브랜드의 일본 시장 진출을 위한 초동 기획의 일환으로, 브랜드 인지도 강화 및 주요 관계자들과의 네트워크 구축을 목표로 진행되었습니다.<br>
+ 이번 행사에는 셀럽, 미디어, 업계 관계자들이 초청되었으며, 대표적으로 오마이걸 유아와 배우 이지훈 등이 참석해 자리를 빛냈습니다. <br>
+브랜드 아이덴티티를 강조하는 첫 공식 이벤트로서, 일본 내에서 프리미엄한 브랜드 이미지를 구축하고 향후 마케팅 활동의 기반을 다지는 데 중점을 두었습니다.  </div>
 		
-<div style="width: 100vw; max-width: 1200px; margin-left: 0; text-align: center; padding-bottom: 2rem;">
-  <img src="assets/images/design/margiel/projcet_1_thumbnail_2.png" alt="project-image1" class="project-image"  />
+
+		
+		<!--
+		<div class="custom-line"></div>
+		-->
+		
+		<div class="project-title2"> Branding Point </div>
+		<div style="width: 100vw; max-width: 1200px; margin-left: 0; text-align: center; padding-bottom: 0rem; padding-bottom: 0.5rem; padding-top: 1rem;">
+  <img src="assets/images/marketing/vunque/vunque1.jpg" alt="project-image1" class="project-image"  />
+</div>
+<!-- <div style="width: 90vw; max-width: 550px; margin-left: 0; text-align: center; padding-top: 2.5rem; padding-bottom: 4rem;">
+  <img src="assets/images/design/moogoong/logo.png" alt="project-image" style="width: 70%; height: auto;" />
+</div>	-->
+	  <div class="project-description">
+	<p>일본 시장 런칭 파티인 만큼, 브랜드의 로고와 시그니처 디자인 요소를 메인 콘셉트로 공간을 구성하였습니다.<br>
+중-고가의 가방 브랜드인이기에 프리미엄 이미지를 강조했습니다. <br>
+또한, 120m² 규모의 공간을 리셉션, 케이터링, 인터뷰 공간, 파티 &amp; 전시 공간으로 나누어 방문자들의 체류 시간이 짧아지는 것을 방지하고, 브랜드 경험의 몰입도를 높였습니다.</p>
+	  </div>
+		
+
+		
+<!--
+		
+<div class="project-title2"> Brand Target&nbsp; </div>		
+		
+	<div style="width: 100vw; max-width: 1200px; margin-left: 0; text-align: center; padding-bottom: 0rem; padding-bottom: 0.5rem; padding-top: 1rem;">
+  <img src="assets/images/marketing/vunque/vunque2.jpg" alt="project-image1" class="project-image"  />
 </div>
 		
-<div class="project-title2"> Project Overview </div>
+	<div class="project-description">
+	<p>브랜드의 주 타겟은 25세에서 35세 사이의 감각적이고 자기 표현에 민감한 사람들입니다.<br>
+      이들은 단순히 유행을 따르기보다는, 의미 있고 오래 입을 수 있는 옷을 찾는 경향이 있습니다. </p>
+	</div>
 		
-<div class="project-description">
-메종 마르지엘라는 프랑스 기반의 패션 브랜드입니다. <br>
-마르지엘라는 기존의 패션계에 반하는 태도와 해체주의를 표방하는 디자인이 특징입니다.
-<br><br>
- 포스터에는 브랜드의 이미지와 함께 기하학적 도형과 추상적인 도형을 배치하고<br> 자유로운 레이아웃으로 구성했습니다.</div>
+-->
+			
+<div class="project-title2"> Contribution </div>		
 		
-		<div style="width: 100vw; max-width: 850px; margin-left: 0; text-align: center; padding-bottom: 2rem;">
-  <img src="assets/images/design/margiel/margiela4.jpg" alt="project-image1" style="width: 65%; height: auto;" />
+	<div style="width: 100vw; max-width: 1200px; margin-left: 0; text-align: center; padding-bottom: 0rem; padding-bottom: 0.5rem; padding-top: 1rem;">
+  <img src="assets/images/marketing/vunque/vunque3.jpg" alt="project-image1" class="project-image"  />
 </div>
 		
-<div style="width: 100vw; max-width: 850px; margin-left: 0; text-align: center; padding-bottom: 2rem;">
-  <img src="assets/images/design/margiel/margiela1.png" alt="project-image" style="width: 100%; height: auto;" />
-</div>
+	<div class="project-description">
+	<p>공간 디자인 (기여도 : 80-90%)<br>
+・ 브랜드 컨셉을 효과적으로 표현할 수 있는
+  공간 컨셉 기획 및 SketchUp 제작<br>
+・ 방문객 동선 고려 및 내부 콘텐츠 세분화<br><br>
+협력사 관리 (기여도 : 55-60%)<br>
+・ 설치 및 제작업체, 집기 렌탈사, 이벤트 장소 등 협력업체     <br><br>
+  전반과의 커뮤니케이션 및 관리
+클라이언트 대응 (기여도 : 70-75%)<br>
+・ 브랜드와의 주요 커뮤니케이션 담당<br>
+・ 이벤트 준비 및 진행  관리<br><br>
+현장 스케치 영상 기획 (기여도 : 50-55%)<br>
+・ 브랜드 요청에 따른 현장 스케치 영상 기획 (사내 제작,  텍스트 클릭 시 영상 페이지로 이동)<br>
+・ 구매 금액 기준 및 사은품 선정에 대한 의견 제시
+
+
+</p>
+	</div>
 		
 		
-		<div style="width: 100vw; max-width: 850px; margin-left: 0; text-align: center; padding-bottom: 2rem;">
-  <img src="assets/images/design/margiel/margiela3.jpg" alt="project-image1" style="width: 65%; height: auto;" />
+	 
+
+
+
+
+
+
+
+	
+		
+		
+  
+		
+<!--
+		<div style="width: 80vw; max-width: 1200px; margin-left: 0; text-align: center; padding-bottom: 2rem;">
+  <img src="assets/images/design/yohji/projcet4.jpg" alt="project-image1" style="width: 65%; height: auto;" />
+</div><div style="width: 80vw; max-width: 1200px; margin-left: 0; text-align: center; padding-bottom: 2rem;">
+  <img src="assets/images/design/yohji/projcet2.jpg" alt="project-image1" style="width: 65%; height: auto;" />
 </div>
+		-->
 		
 		<div class="project-description2">
 		Personal work<br>
-		02.2020 - 08.2020<br>
-		Tool : Photoshop, Illustrator, Lightroom
-		</div>
+		05.2025 - 05.2025<br>
+		Tool : Photoshop, Illustrator, Midjourney </div>
     
-		<div class="back-link" onclick="history.back()">← back previous page</div>
-    </section>
 
+	<div class="back-link" onclick="history.back()">← back previous page</div>
+    </section>
+	
 <footer style="footer;">
   <div>© 2025 Taekun Kim. All rights reserved.</div>
   <div><a href="mailto:taekun.kim95@gmail.com" style="color: #999; text-decoration: underline;">taekun.kim95@gmail.com</a></div>
@@ -367,5 +518,6 @@ footer a {
       menu.classList.toggle('active');
     }
   </script>
+
 </body>
 </html>

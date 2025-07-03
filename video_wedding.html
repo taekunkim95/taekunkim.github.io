@@ -4,9 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="robots" content="noindex, nofollow" />
-  <title>ART POSTER SERIES 1</title>
+  <title>Branding 2</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <style>
+<style>
     :root {
       --bg-color: #fcfcfc;
       --text-color: #222;
@@ -126,9 +126,22 @@
 	  margin-bottom: 0rem;
     }
 
+.project-image2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2열 */
+  gap: 10px; /* 이미지 간 간격 */
+  width: 75vw;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.project-image2 img {
+  width: 100%;
+  height: auto;
+}
     .project-title {
-      margin-top: 2rem;
-      margin-bottom: 1.5rem;
+      margin-top: 1.3rem;
+      margin-bottom: 1.3rem;
       font-size: 18px;
       font-weight: 500;
       color: #757575;
@@ -139,8 +152,8 @@
     }
 
 	 .project-title2 {
-      margin-top: 0;
-      margin-bottom: 1.5rem;
+      margin-top: 2rem;
+      margin-bottom: 3px;
       font-size: 16px;
       font-weight: 500;
       color: #757575;
@@ -150,7 +163,20 @@
       margin-left: 0;
     }
 
+	 .project-title3 {
+      margin-top: 2.5rem;
+      margin-bottom: 3px;
+      font-size: 16px;
+      font-weight: 500;
+      color: #757575;
+      max-width: 1200px;
+      text-align: left;
+      width: 75vw;
+      margin-left: 0;
+	  text-decoration: underline;
 	  
+    }	
+
     .project-description {
       font-size: 12px;
       line-height: 1.7;
@@ -160,7 +186,7 @@
       max-width: 1200px;
       margin-left: 0;
     }
-	  
+
 	 .project-description2 {
       margin-top: 2rem;
 	  margin-bottom: 2rem;
@@ -168,6 +194,16 @@
       line-height: 1.7;
       color: #757575;
       margin-bottom: 45px;
+      width: 75vw;
+      max-width: 1200px;
+      margin-left: 0;
+    }
+
+    .project-description3 {
+      font-size: 11.5px;
+      line-height: 1.7;
+      color: #595959;
+      margin-bottom: 10px;
       width: 75vw;
       max-width: 1200px;
       margin-left: 0;
@@ -194,6 +230,39 @@
       background: #888;
     }
 
+	 .custom-line {
+  height: 10px;
+  background-color: #FFFFFF;
+  width: 100vw;    
+  max-width: 1200px;
+  margin-top: 2rem ;
+  margin-bottom: 2rem ;
+}
+	 .custom-line2 {
+  height: 1.2px;
+  background-color: #CACACA;
+  width: 75vw;    
+  max-width: 1200px;
+  margin-top: 2rem ;
+  margin-bottom: 2rem ;
+}
+	  
+	
+.video-container {
+  width: 75vw;        /* PC 기본 너비 */
+  max-width: 1200px;
+  margin: 1rem auto 0rem;
+}
+
+.video-container iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: none;
+  display: block;
+}
+
+
+	
 	  	  footer {
   text-align: center;
   margin-top: 0rem;
@@ -243,7 +312,7 @@ footer a {
       .menu-wrapper {
         justify-content: space-between;
       }
-		
+
       .project-title {
         font-size: 14px;
 		padding-right: 20px;
@@ -252,12 +321,25 @@ footer a {
       .project-title2 {
         font-size: 12px;
 		padding-right: 20px;
+		margin-top: 25px;
+      }
+
+	  .project-title3 {
+        font-size: 12px;
+		padding-right: 20px;
+		margin-top: 0px;
       }
 		
       .project-description {
         font-size: 10px;
         padding-right: 20px;
 		margin-bottom: 30px;
+      }
+		
+      .project-description3 {
+        font-size: 10px;
+        padding-right: 20px;
+		margin-bottom: 10px;
       }
 		
 	  .project-description2 {
@@ -277,12 +359,40 @@ footer a {
     padding-left: 0px;
     padding-right: 0px;
   }
-		 
-	footer {
+		
+ .custom-line {
+  height: 3px;
+  background-color: #FFFFFF;
+  width: 100vw;    
+  margin-top: 2rem ;
+  margin-bottom: 2rem ;
+}
+		
+.custom-line2 {
+  height: 1.2px;
+  background-color: #CACACA;
+  width: 100vw;    
+  margin-top: 2rem ;
+  margin-bottom: 2rem ;
+}
+		
+		
+	.project-image2 {
+ grid-template-columns: 1fr; /* 한 줄 */
+ width: 100vw;
+  }
+	
+ .video-container {
+    width: 100vw;    /* 모바일에서는 화면 꽉 채우기 */
+    max-width: none; /* 최대 너비 제한 해제 */
+  }
+		
+			footer {
     font-size: 11px;
   }
+		
     }
-  </style>
+ </style>
 </head>
 <body>
   <header>
@@ -313,49 +423,81 @@ footer a {
  </section>
 
 	<section class="project-gallery">
-      <img src="assets/images/design/margiel/projcet_1_thumbnail_1.png" alt="ART POSTER SERIES" class="project-image" />
+		
+			  <div style="width: 100vw; max-width: 1200px; margin-left: 0; text-align: center; padding-bottom: 0.5rem; padding-top: 1rem;">
+  <img src="assets/images/video/wedding/projcet_1_thumbnail_1.jpg" alt="project-image1" class="project-image" /> </div>
+		
+		
+  <h2 class="project-title">WEDDING CELEBRATION VIDEOS - Nakamura's Wedding </h2>
+		
+ <div class="project-description">
+      두 편의 결혼 축하 영상을 기획 및 제작했습니다.<br>
+하나는 신랑과 신부, 두 사람만이 등장하는 감성 중심의 영상이고,<br>다른 하나는 양가 어머니의 회상과 축하 메시지를 담은 인터뷰 중심 영상입니다.<br>영상은 결혼식 당일 현장에서 상영되었습니다.
+</div>
+		
+		
+ 
 
-      <h2 class="project-title">ART POSTER SERIES 2 - Issey Miyake, Homme Plisse Haru Print </h2>
+	   <h2 class="project-title2">1st VIDEO - Nakamura's Wedding Celebration </h2>
+		
+		<div class="video-container">
+  <iframe   src="https://www.youtube.com/embed/JDmtPWCzuAc?si=TrIvi9wuree4pGqE"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    referrerpolicy="strict-origin-when-cross-origin"
+    allowfullscreen 
+	style="margin-bottom: 10px;">
+  </iframe>
+</div>
+		
 
+
+		
       <div class="project-description">
-       패션 브랜드의 아이덴티티와 시각적 요소를 서칭한 후, 시각적으로 재해석한 아트 포스터 개인 작업입니다.<br>
-	   시각적인 후킹을 우선순위로 브랜드의 이미지, 로고, 다양한 폰트를 사용해 한장의 이미지들로 제작했습니다. <br>
-작업물들은 콘텐츠와 오프라인 환경을 고려해 제작되었습니다.</div>
-		
-<div style="width: 100vw; max-width: 1200px; margin-left: 0; text-align: center; padding-bottom: 2rem;">
-  <img src="assets/images/design/margiel/projcet_1_thumbnail_2.png" alt="project-image1" class="project-image"  />
+      <p>첫 번째 영상은 신랑과 신부 두 사람만이 등장합니다.<br> 촬영은 신랑의 고향이자 두 사람이 신혼 생활을 시작하는 기후(氣候)현에서 진행하였습니다. 두 사람의 행복과 기대에 대한 감정을 담았습니다. <br>
+별도의 대사 없이 비주얼과 음악만으로 감정을 전달하는 MV식 표현 방식으로 구성했습니다.<br>
+색보정은 따뜻한 톤을 유지해 영상 전반의 무드를 통일했습니다.<br></p>
 </div>
 		
-<div class="project-title2"> Project Overview </div>
+
 		
-<div class="project-description">
-메종 마르지엘라는 프랑스 기반의 패션 브랜드입니다. <br>
-마르지엘라는 기존의 패션계에 반하는 태도와 해체주의를 표방하는 디자인이 특징입니다.
-<br><br>
- 포스터에는 브랜드의 이미지와 함께 기하학적 도형과 추상적인 도형을 배치하고<br> 자유로운 레이아웃으로 구성했습니다.</div>
-		
-		<div style="width: 100vw; max-width: 850px; margin-left: 0; text-align: center; padding-bottom: 2rem;">
-  <img src="assets/images/design/margiel/margiela4.jpg" alt="project-image1" style="width: 65%; height: auto;" />
+
+		<div class="project-title2">2nd VIDEO - Mothers’ Voice</div>	
+	<div class="video-container">
+  <iframe   src="https://www.youtube.com/embed/xPLNcECxVCM?si=DHosVzB1dWsEl3YQ"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    referrerpolicy="strict-origin-when-cross-origin"
+    allowfullscreen
+	style="margin-bottom: 10px;">
+  </iframe>
 </div>
 		
-<div style="width: 100vw; max-width: 850px; margin-left: 0; text-align: center; padding-bottom: 2rem;">
-  <img src="assets/images/design/margiel/margiela1.png" alt="project-image" style="width: 100%; height: auto;" />
-</div>
+	
 		
+
 		
-		<div style="width: 100vw; max-width: 850px; margin-left: 0; text-align: center; padding-bottom: 2rem;">
-  <img src="assets/images/design/margiel/margiela3.jpg" alt="project-image1" style="width: 65%; height: auto;" />
-</div>
+	<div class="project-description">
+	<p>두 번째 영상은 양가 어머니의 회상과 축하 인터뷰로 구성했습니다.<br>
+단순한 인터뷰 영상이 아닌, 삶의 조각을 회고하는 다큐멘터리적인 구성을 했습니다.<br>
+어머니 각각의 말 속에서 드러나는 감정의 온도를 중심으로, 질문과 컷 배열 조율하며 자연스럽게 흐름이 이어지도록 편집했습니다.<br>
+인터뷰 대상자의 표정, 숨 멈춤, 웃음 등을 화면에 담아내는 연출을 통해 진정성이 전달되도록 구성했습니다.
+      </p>
+	</div>
+	 
+
 		
 		<div class="project-description2">
-		Personal work<br>
-		02.2020 - 08.2020<br>
-		Tool : Photoshop, Illustrator, Lightroom
-		</div>
+		Client work<br>
+		Directing / Filming / Editing : Taekun <br>
+		Acting : Nakamura Hayato, Nakamura Juri, The bride and groom’s mothers <br>
+		06.2024 - 07.2024<br>
+		Tool : Premiere Pro<br>
+		Camera : Sonny Zv-e10
+</div>
     
-		<div class="back-link" onclick="history.back()">← back previous page</div>
+		
+      <div class="back-link" onclick="history.back()">← back previous page</div>
     </section>
-
+	
 <footer style="footer;">
   <div>© 2025 Taekun Kim. All rights reserved.</div>
   <div><a href="mailto:taekun.kim95@gmail.com" style="color: #999; text-decoration: underline;">taekun.kim95@gmail.com</a></div>
@@ -367,5 +509,6 @@ footer a {
       menu.classList.toggle('active');
     }
   </script>
+
 </body>
 </html>

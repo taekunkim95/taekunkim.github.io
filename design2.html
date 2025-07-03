@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -89,18 +90,18 @@
     .menu-toggle {
       display: none;
       flex-direction: column;
+      gap: 5px;
       cursor: pointer;
-      gap: 4px;
     }
 
     .menu-toggle div {
-      width: 20px;
+      width: 24px;
       height: 2px;
-      background: #888;
+      background-color: #333;
     }
 
     section {
-      padding: 10px 40px 0px;
+      padding: 10px 40px 20px;
       max-width: 1200px;
       margin: 0 auto;
     }
@@ -159,23 +160,11 @@
 .thumbnail {
   width: 75vw;
   max-width: 900px;
-  overflow: hidden;
-  position: relative;
+  height: auto;
   display: block;
-}
-  
-.project-item:hover .thumbnail img {
-  transform: scale(1.03);
 }
 	  
-.thumbnail img {
-  width: 100%;
-  height: auto;
-  transition: transform 0.3s ease;
-  display: block;
-}
-
-
+	  
     .project-title {
   margin-top: 1.2rem;
   margin-bottom: 0.8rem;
@@ -231,7 +220,7 @@ footer a {
         top: 100%;
         left: 0;
         width: 100%;
-        padding: 1.5rem 0;
+        padding: 1rem 0;
         gap: 1.5rem;
       }
 
@@ -291,7 +280,7 @@ footer a {
 }
 
   .h2 { 
- padding: 0px 40px 0px;}
+ padding: 0px 35px 0px;}
 		
 		
 	footer {
@@ -327,7 +316,7 @@ footer a {
           <a href="design.html">DESIGN</a>
           <a href="video.html">VIDEO</a>
           <a href="marketing.html">MARKETING</a>
-        <!--  <a href="casestudy.html">CASE STUDY</a> -->
+          <!-- <a href="casestudy.html">CASE STUDY</a> -->
           <button class="lang-switch" onclick="location.href='index_en.html'">ENG</button>
         </div>
       </div>
@@ -335,50 +324,41 @@ footer a {
   </header>
 
   <section class="hero">
-    <div class="h2">PROJECTS</div>
-	</section>
-
+    <div class="h2">
+      PROJECTS
+    </div>
     <section class="project-gallery">
 		    
-<a href="design_brand2.html" class="project-item">
-  <div class="thumbnail">
-    <img src="assets/images/design/moogoong/projcet_2_thumbnail_5.png" alt="Project 2 Thumbnail" />
-  </div>
-  <h3 class="project-title">FICTIONAL BRAND DESIGN - Visualized with Midjourney</h3>	
-  <h4 class="project-text">Moogoong, Denim Brand&nbsp;</h4>
-</a>
-		
-<a href="design_logo1.html" class="project-item">
-  <div class="thumbnail">
-    <img src="assets/images/design/garam/projcet_2_thumbnail_3.png" alt="Project 2 Thumbnail" />
-  </div>
-  <h3 class="project-title">BRAND DESIGN</h3>	
-  <h4 class="project-text">Garam Project, VJ Production</h4>
-</a>
+	<a href="design_logo1.html" class="project-item">
+    <img src="assets/images/design/garam/projcet_2_thumbnail_3.png" alt="Project 2 Thumbnail" class="thumbnail" />
+    <h3 class="project-title">LOGO DESIGN</h3>	
+	<h4 class="project-text">Garam Project, VJ Production</h4>
+  </a>
 		
     <a href="design_art_poster2.html" class="project-item">
-    <div class="thumbnail">
-    <img src="assets/images/design/issey/projcet_1_thumbnail_1.png" alt="Project 2 Thumbnail" />
-		</div>
+    <img src="assets/images/design/issey/projcet_1_thumbnail_1.png" alt="Project 2 Thumbnail" class="thumbnail" />
     <h3 class="project-title">ART POSTER SERIES 3</h3>	
 	<h4 class="project-text">Issey Miyake, Homme Plisse Haru Print</h4>
   </a>
 		
   <a href="design_art_poster1.html" class="project-item">
-	   <div class="thumbnail">
-    <img src="assets/images/design/yohji/projcet_1_thumbnail_2.png" alt="Project 1 Thumbnail" />
-	  </div>
+    <img src="assets/images/design/yohji/projcet_1_thumbnail_2.png" alt="Project 1 Thumbnail" class="thumbnail" />
     <h3 class="project-title">ART POSTER SERIES 2</h3>
 	<h4 class="project-text">Yohji Yamamoto, My Dear Bomb</h4>
   </a>
 		
 		<a href="design_art_poster4.html" class="project-item">
-	 <div class="thumbnail">
-    <img src="assets/images/design/margiel/projcet_1_thumbnail_1.png" alt="Project 1 Thumbnail"  />
-			</div>
+    <img src="assets/images/design/margiel/projcet_1_thumbnail_1.png" alt="Project 1 Thumbnail" class="thumbnail" />
     <h3 class="project-title">ART POSTER SERIES 1</h3>
 	<h4 class="project-text">Masion Margiela Paris</h4>
   </a>
+<!--
+		<a href="design_art_poster3.html" class="project-item">
+    <img src="assets/images/design/raf/projcet_1_thumbnail_1.png" alt="Project 1 Thumbnail" class="thumbnail" />
+    <h3 class="project-title">ART POSTER SERIES 1</h3>
+	<h4 class="project-text">Raf Simons</h4>
+  </a>
+-->
 		
   <!-- 필요하면 더 추가 -->
 </section>
@@ -388,7 +368,7 @@ footer a {
   <div><a href="mailto:taekun.kim95@gmail.com" style="color: #999; text-decoration: underline;">taekun.kim95@gmail.com</a></div>
 </footer>
 	  
-  <script>
+<script>
     function toggleMenu() {
       const menu = document.getElementById('navMenu');
       menu.classList.toggle('active');
