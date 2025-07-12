@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Branding 2</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+    :root {
+      --bg-color: #fcfcfc;
+      --text-color: #222;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      color: var(--text-color);
+      background-color: var(--bg-color);
+      scroll-behavior: smooth;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: var(--bg-color);
+      z-index: 1000;
+    }
+
+    nav {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 1.2rem 1.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .logo {
+      margin-bottom: 2rem;
+      margin-top: 0.6rem;
+    }
+
+    .logo img {
+      width: 80px;
+      height: auto;
+      cursor: pointer;
+    }
+
+    .menu-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      gap: 1rem;
+    }
+
+    .menu {
+      display: flex;
+      gap: 7rem;
+      flex-wrap: nowrap;
+      align-items: center;
+	  transition: gap 0.3s, font-size 0.3s;
+    }
+
+    .menu a {
+      text-decoration: none;
+      color: #757575;
+      font-weight: 350;
+      font-size: 12px;
+      transition: color 0.2s;
+    }
+
+    .menu a:hover {
+      color: #000000;
+    }
+
+    .lang-switch {
+      font-size: 11px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: #757575;
+      font-weight: 200;
+    }
+
+    section {
+      padding: 10px 40px 0px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .hero {
+      padding-top: 165px;
+      text-align: left;
+    }
+	
+.hero video {
+  width: 75vw;
+  max-width: 1200px;
+  height: auto;
+  display: block;
+  margin: 0 auto 0rem auto;
+  margin-bottom: 0rem;
+}
+	
+    .h2 {
+      font-weight: 400;
+      font-size: 16px;
+      color: #757575;
+      margin-bottom: 2.2rem;
+      line-height: 1.6;
+      max-width: 700px;
+      margin-right: auto;
+    }
+
+    .project-gallery {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0rem;
+	  padding-top: 0px;
+      padding-bottom: 100px;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+
+    .project-image {
+      width: 75vw;
+      max-width: 1200px;
+      height: auto;
+      display: block;
+      margin: 0 auto 0rem auto; /* 이미지 아래 간격 줄임, 중앙 정렬 유지 */
+	  margin-bottom: 0rem;
+    }
+
+.project-image2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2열 */
+  gap: 10px; /* 이미지 간 간격 */
+  width: 75vw;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.project-image2 img {
+  width: 100%;
+  height: auto;
+}
+    .project-title {
+      margin-top: 2rem;
+      margin-bottom: 1.5rem;
+      font-size: 18px;
+      font-weight: 500;
+      color: #757575;
+      max-width: 1200px;
+      text-align: left;
+      width: 75vw;
+      margin-left: 0;
+    }
+
+	 .project-title2 {
+      margin-top: 2.5rem;
+      margin-bottom: 3px;
+      font-size: 16px;
+      font-weight: 500;
+      color: #757575;
+      max-width: 1200px;
+      text-align: left;
+      width: 75vw;
+      margin-left: 0;
+    }
+
+	 .project-title3 {
+      margin-top: 2.5rem;
+      margin-bottom: 3px;
+      font-size: 16px;
+      font-weight: 500;
+      color: #757575;
+      max-width: 1200px;
+      text-align: left;
+      width: 75vw;
+      margin-left: 0;
+	  text-decoration: underline;
+	  
+    }	
+
+    .project-description {
+      font-size: 12px;
+      line-height: 1.7;
+      color: #595959;
+      margin-bottom: 45px;
+      width: 75vw;
+      max-width: 1200px;
+      margin-left: 0;
+    }
+
+	 .project-description2 {
+      margin-top: 2rem;
+	  margin-bottom: 2rem;
+	  font-size: 11px;
+      line-height: 1.7;
+      color: #757575;
+      margin-bottom: 45px;
+      width: 75vw;
+      max-width: 1200px;
+      margin-left: 0;
+    }
+
+    .project-description3 {
+      font-size: 12px;
+      line-height: 1.7;
+      color: #595959;
+      margin-bottom: 10px;
+      width: 75vw;
+      max-width: 1200px;
+      margin-left: 0;
+    }
+	
+    .youtube-link {
+      font-size: 10px;
+      line-height: 1.7;
+      color: #595959;
+	  margin-top: -28px;
+      margin-bottom: 10px;
+      width: 75vw;
+      max-width: 1200px;
+      margin-left: 0;
+    }
+	
+    .back-link {
+      font-size: 13px;
+      color: #757575;
+      text-decoration: underline;
+      cursor: pointer;
+	  margin-top: 20px;
+    }
+
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      gap: 4px;
+    }
+
+    .menu-toggle div {
+      width: 20px;
+      height: 2px;
+      background: #888;
+    }
+
+	 .custom-line {
+  height: 10px;
+  background-color: #FFFFFF;
+  width: 100vw;    
+  max-width: 1200px;
+  margin-top: 2rem ;
+  margin-bottom: 2rem ;
+}
+	 .custom-line2 {
+  height: 1.2px;
+  background-color: #CACACA;
+  width: 75vw;    
+  max-width: 1200px;
+  margin-top: 2rem ;
+  margin-bottom: 2rem ;
+}
+	  
+	
+.video-container {
+  width: 100vw;        /* PC 기본 너비 */
+   margin: 1rem  0rem;
+}
+
+.video-container iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: none;
+  display: block;
+}
+
+
+	
+	  	  footer {
+  text-align: center;
+  margin-top: 0rem;
+  padding: 2rem 0;
+  font-size: 13px;
+  color: #999;
+}
+footer a {
+  color: #999;
+  text-decoration: underline;
+}
+
+	  
+    @media (max-width: 1024px) {
+      .menu {
+        gap: 3rem;
+      }
+    }
+
+    @media (max-width: 900px) {
+      .menu {
+        gap: 2rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .menu {
+        display: none;
+        flex-direction: column;
+        background: var(--bg-color);
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1.5rem 0;
+        gap: 1.5rem;
+      }
+
+      .menu.active {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: flex;
+      }
+
+      .menu-wrapper {
+        justify-content: space-between;
+      }
+
+      .project-title {
+        font-size: 14px;
+		padding-right: 20px;
+      }
+		
+      .project-title2 {
+        font-size: 12px;
+		padding-right: 20px;
+		margin-top: 0px;
+      }
+
+	  .project-title3 {
+        font-size: 12px;
+		padding-right: 20px;
+		margin-top: 0px;
+      }
+		
+      .project-description {
+        font-size: 10px;
+        padding-right: 20px;
+		margin-bottom: 30px;
+      }
+		
+      .project-description3 {
+        font-size: 10px;
+        padding-right: 20px;
+		margin-bottom: 10px;
+      }
+		
+		
+	  .project-description2 {
+	padding-right: 20px;
+    font-size: 9px;
+		}
+
+		
+    .youtube-link {
+        font-size: 10px;
+        padding-right: 20px;
+		margin-bottom: 40px;
+	    margin-top: -10px;
+      }
+		
+  .project-image {
+    width: 100vw; /* 화면 거의 꽉 채우기 */
+    max-width: none; /* 최대폭 제한 해제 */
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* 이미지가 들어있는 부모 요소의 패딩도 줄여서 꽉 차 보이게 하기 */
+  .project-gallery {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+		
+ .custom-line {
+  height: 3px;
+  background-color: #FFFFFF;
+  width: 100vw;    
+  margin-top: 2rem ;
+  margin-bottom: 2rem ;
+}
+		
+.custom-line2 {
+  height: 1.2px;
+  background-color: #CACACA;
+  width: 100vw;    
+  margin-top: 2rem ;
+  margin-bottom: 2rem ;
+}
+		
+		
+	.project-image2 {
+ grid-template-columns: 1fr; /* 한 줄 */
+ width: 100vw;
+  }
+	
+ .video-container {
+    width: 100vw;    /* 모바일에서는 화면 꽉 채우기 */
+    max-width: none; /* 최대 너비 제한 해제 */
+  }
+		
+			footer {
+    font-size: 11px;
+  }
+		
+    }
+ </style>
+</head>
+<body>
+  <header>
+     <nav>
+      <div class="logo">
+        <a href="../index_en.html"><img src="../taekun_logo.png" alt="logo" /></a>
+      </div>
+      <div class="menu-wrapper">
+        <div class="menu-toggle" onclick="toggleMenu()">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="menu" id="navMenu">
+          <a href="../index_en.html">PROFILE</a>
+          <a href="design_en.html">DESIGN</a>
+          <a href="video_en.html">VIDEO</a>
+          <a href="marketing_en.html">MARKETING</a>
+         <!-- <a href="casestudy.html">CASE STUDY</a> -->
+        <button class="lang-switch" onclick="location.href='../index.html'">KOR</button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="h2">PROJECTS</div>
+ </section>
+
+	<section class="project-gallery">
+
+		
+<video class="project-image" autoplay loop playsinline muted>
+  <source src="../assets/images/video/potbad/projcet_1_thumbnail_3.mp4" type="video/mp4" />
+  브라우저가 비디오를 지원하지 않습니다.
+</video>
+
+		
+		
+
+      <h2 class="project-title">YOUTUBE PROJECT - Potbad, Fashion YouTube</h2>
+		
+
+
+      <div class="project-description">
+Potbad is a fashion-focused YouTube channel with over 23,000 subscribers.<br>
+It shares fashion-related insights from an editor’s perspective, covering topics like brand history, trends, and cultural context.<br><br>
+The channel is run by a two-person team, including myself. All tasks—planning, research, production, and channel management—are equally divided, except for voice dubbing.<br>
+Through the channel, we aim to understand brand strategies, market trends, and consumer behavior.</div>
+		
+	 <a class= "youtube-link" href= "https://www.youtube.com/@PotbadMagazine" target="_blank" rel="noopener noreferrer">Click here to visit the channel →</a>	
+
+		
+<div class="project-title2"> Channel Concept</div>		
+		
+<video class="project-image" controls playsinline style= "padding-bottom: 0.5rem; padding-top: 1rem;">
+  <source src="../assets/images/video/potbad/projcet_1_thumbnail_2.mp4" type="video/mp4" />
+  브라우저가 비디오를 지원하지 않습니다.
+</video>
+		
+	<div class="project-description">
+	<p>Potbad is built around the idea of “community”<br><br>
+Viewers often share their thoughts in the comments, creating active discussions.<br>
+Topics are chosen based on current events or trends, and we always incorporate the editors’ individual viewpoints.<br>
+Rather than delivering neutral information, we present fashion through a timely and opinionated lens.   
+      </p>
+	</div>
+		
+		<div class="project-title2"> 1st Video Structure &amp; Planning - Why Are Fashion Brands Opening Cafe?</div>
+		<div class="video-container">
+  <iframe   src="https://www.youtube.com/embed/-MCXGVPz8LM?si=DhJ_IUVbcGaHdSNM"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    referrerpolicy="strict-origin-when-cross-origin"
+    allowfullscreen
+		  style="margin-bottom: 10px;">
+  </iframe>
+</div>
+	  <div class="project-description3">
+	<p>We opened with the buzz-worthy example of Zara’s café in Myeong-dong, using it to grab viewers’ attention.
+<br>
+The video then explores the trend of fashion brands entering the F&amp;B space—not just as lifestyle statements but as strategic moves.<br>
+We analyzed these cafés in terms of spatial branding, dwell-time strategy, and entry-level marketing.</p>
+	  </div>
+		
+		
+
+		
+<video class="project-image" controls playsinline style= "padding-bottom: 0.5rem; padding-top: 0rem;">
+  <source src="../assets/images/video/potbad/youtube_video_1.mp4" type="video/mp4" />
+  브라우저가 비디오를 지원하지 않습니다.
+</video>
+		
+	<div class="project-description3">
+	<p>This content aimed to highlight the channel’s observational depth and editorial insight.<br>
+We chose the topic knowing it resonates with trend-conscious audiences who frequently visit branded cafés.<br>
+The video didn't just explain the phenomenon, but also asked how consumers perceive and internalize brand identity through space.
+<br><br>
+Viewer responses included thoughtful comments like:
+"I never thought about it that way—really interesting!"<br>
+as well as personal stories:
+"I loved the Vivienne Westwood café in Hong Kong!"</p>
+	</div>
+		
+		
+<video class="project-image" controls playsinline style= "padding-bottom: 0.5rem; padding-top: 0rem;">
+  <source src="../assets/images/video/potbad/youtube_video_2.mp4" type="video/mp4" />
+  브라우저가 비디오를 지원하지 않습니다.
+</video>
+		
+<div class="project-description">
+	<p>1. Intro (Hook) :<br>
+Opened with the Zara café to provoke curiosity.<br>
+Asked: “Why are fashion brands opening cafés?”
+<br><br>
+2. Insight 1<br>
+The goal isn’t to profit from coffee.<br>
+Cafés serve as accessible, longer-stay brand spaces compared to retail stores.
+<br><br>
+3. Insight 2<br>
+They act as entry points—letting consumers experience the brand at a lower cost.
+<br><br>
+4. Weak Examples<br>
+Some cafés (e.g. Margiela, Zara) lack clear ties to their brand philosophy.
+<br><br>
+5. Strong Examples<br>
+Brands like Aimé Leon Dore and Ralph’s Coffee succeed by aligning space design with identity.
+<br><br>
+6. Conclusion<br>
+Cafés are not just trendy additions but expressions of brand identity.<br>
+They should be planned based on brand values—not just as a marketing trend.</p>
+	</div>
+		
+		<div class="project-title2"> 2nd Video Structure &amp; Planning - Why Does Japanese Fashion Look Better?</div>
+		<div class="video-container">
+  <iframe   src="https://www.youtube.com/embed/eyHzrfJ3IVU?si=WhVff1IVBmRizhC1" title="YouTube video player"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    referrerpolicy="strict-origin-when-cross-origin"
+    allowfullscreen
+		  style="margin-bottom: 10px;">
+  </iframe>
+</div>
+		<div class="project-description3">
+	<p>There’s a common notion in Korean fashion communities that Japanese brands are “better”<br>
+This video started with the question: Is Japanese fashion really superior?<br>
+I drew from personal experience working in a Japanese fashion company and living in Japan to explain the cultural and industry context.
+      </p>
+	</div>
+		
+<video class="project-image" controls playsinline style= "padding-bottom: 0.5rem; padding-top: 0rem;">
+  <source src="../assets/images/video/potbad/youtube_2video_1.mp4" type="video/mp4" />
+  브라우저가 비디오를 지원하지 않습니다.
+</video>
+		
+	<div class="project-description3">
+	<p>The video encouraged viewers to form their own opinions, not just echo what’s trending on social media.<br>
+We approached the topic from multiple angles, including fashion culture, consumer habits, and structural differences in the industry.
+<br><br>
+Audience responses were diverse:<br>
+"I studied abroad in Japan—honestly, not everyone there dresses well!"<br>
+"Japanese people really do express themselves uniquely."</p>
+	</div>
+		
+		
+<video class="project-image" controls playsinline style= "padding-bottom: 0.5rem; padding-top: 0rem;">
+  <source src="../assets/images/video/potbad/youtube_2video_2.mp4" type="video/mp4" />
+  브라우저가 비디오를 지원하지 않습니다.
+</video>
+		
+<div class="project-description">
+	<p>1. Intro (Hook)<br>
+Began with a familiar phrase: “With that money, I’d buy a Japanese brand.”<br>
+Used this to spark curiosity and frame the discussion.
+<br><br>
+2. Insight 1<br>
+“Only the best brands are visible.”<br>
+Most Japanese brands known in Korea have already been filtered and validated in Japan.
+<br><br>
+3. Insight 2<br>
+Still, Japan has many strong brands rooted in culture: <br>
+Ura-Harajuku, Ivy, vintage reproduction, Popeye-style casual, etc.
+<br><br>
+4. Insight 3<br>
+The bubble-era economy shaped both brand quality and consumer taste.<br>
+At the time, luxury imports offered designers strong reference points.
+<br><br>
+5. Insight 4<br>
+The Japanese fashion industry values quality over price competition.
+<br><br>
+6. Insight 5<br>
+Consumers in Japan have less bias toward foreign brands.<br>
+Higher offline shopping rates lead to more product-focused, tactile experiences.
+<br><br>
+7. Summary<br>
+Japanese fashion is subculture-driven, while Korean fashion appeals to a broader mainstream audience.
+<br><br>
+8. Outro<br>
+We wrapped up with our editorial view and invited comments.<br>
+Korea now has a strong cultural and brand base. Both markets have distinct strengths.</p>
+	</div>	
+		
+	<div class="project-description2">
+		Team work<br>
+		Collaborated closely with a partner, sharing all key responsibilities equally (excluding voice-over)<br>
+		06.2022 -<br>
+		Tool : After Effect, Premiere Pro, Photoshop, Illustrator<br>
+</div>
+    
+		
+      <div class="back-link" onclick="history.back()">← back previous page</div>
+    </section>
+	
+<footer style="footer;">
+  <div>© 2025 Taekun Kim. All rights reserved.</div>
+  <div><a href="mailto:taekun.kim95@gmail.com" style="color: #999; text-decoration: underline;">taekun.kim95@gmail.com</a></div>
+</footer>
+
+<script>
+    function toggleMenu() {
+      const menu = document.getElementById('navMenu');
+      menu.classList.toggle('active');
+    }
+  </script>
+
+</body>
+</html>
