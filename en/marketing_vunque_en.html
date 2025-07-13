@@ -4,9 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="robots" content="noindex, nofollow" />
-  <title>ART POSTER SERIES 1</title>
+  <title>marketing 2 en</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <style>
+<style>
     :root {
       --bg-color: #fcfcfc;
       --text-color: #222;
@@ -127,6 +127,19 @@
 	  margin-bottom: 0rem;
     }
 
+.project-image2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2열 */
+  gap: 10px; /* 이미지 간 간격 */
+  width: 75vw;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.project-image2 img {
+  width: 100%;
+  height: auto;
+}
     .project-title {
       margin-top: 2rem;
       margin-bottom: 1.5rem;
@@ -140,8 +153,8 @@
     }
 
 	 .project-title2 {
-      margin-top: 0;
-      margin-bottom: 1.5rem;
+      margin-top: 2.5rem;
+      margin-bottom: 3px;
       font-size: 16px;
       font-weight: 500;
       color: #757575;
@@ -151,7 +164,8 @@
       margin-left: 0;
     }
 
-	  
+
+
     .project-description {
       font-size: 12px;
       line-height: 1.7;
@@ -161,14 +175,24 @@
       max-width: 1200px;
       margin-left: 0;
     }
-	  
-	  .project-description2 {
+
+	 .project-description2 {
       margin-top: 2rem;
 	  margin-bottom: 2rem;
 	  font-size: 11px;
       line-height: 1.7;
       color: #757575;
       margin-bottom: 45px;
+      width: 75vw;
+      max-width: 1200px;
+      margin-left: 0;
+    }
+	
+    .project-description3 {
+      font-size: 11px;
+      line-height: 1.7;
+      color: #595959;
+      margin-bottom: 0px;
       width: 75vw;
       max-width: 1200px;
       margin-left: 0;
@@ -194,8 +218,41 @@
       height: 2px;
       background: #888;
     }
+
+	 .custom-line {
+  height: 10px;
+  background-color: #FFFFFF;
+  width: 100vw;    
+  max-width: 1200px;
+  margin-top: 2rem ;
+  margin-bottom: 2rem ;
+}
+	 .custom-line2 {
+  height: 1.2px;
+  background-color: #CACACA;
+  width: 75vw;    
+  max-width: 1200px;
+  margin-top: 2rem ;
+  margin-bottom: 2rem ;
+}
 	  
-	  footer {
+	
+.video-container {
+  width: 75vw;        /* PC 기본 너비 */
+  max-width: 1200px;
+  margin: 1rem auto 3rem;
+}
+
+.video-container iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: none;
+  display: block;
+}
+
+
+	
+	  	  footer {
   text-align: center;
   margin-top: 0rem;
   padding: 2rem 0;
@@ -207,6 +264,7 @@ footer a {
   text-decoration: underline;
 }
 
+	  
     @media (max-width: 1024px) {
       .menu {
         gap: 3rem;
@@ -244,7 +302,6 @@ footer a {
         justify-content: space-between;
       }
 
-    
       .project-title {
         font-size: 14px;
 		padding-right: 20px;
@@ -253,7 +310,9 @@ footer a {
       .project-title2 {
         font-size: 12px;
 		padding-right: 20px;
+		margin-top: 0px;
       }
+
 		
       .project-description {
         font-size: 10px;
@@ -266,6 +325,12 @@ footer a {
     font-size: 9px;
 		}
 		
+      .project-description3 {
+        font-size: 10px;
+        padding-right: 20px;
+		margin-bottom: 0px;
+      }
+				
   .project-image {
     width: 100vw; /* 화면 거의 꽉 채우기 */
     max-width: none; /* 최대폭 제한 해제 */
@@ -278,17 +343,44 @@ footer a {
     padding-left: 0px;
     padding-right: 0px;
   }
-	
 		
-  		  footer {
+ .custom-line {
+  height: 3px;
+  background-color: #FFFFFF;
+  width: 100vw;    
+  margin-top: 2rem ;
+  margin-bottom: 2rem ;
+}
+		
+.custom-line2 {
+  height: 1.2px;
+  background-color: #CACACA;
+  width: 100vw;    
+  margin-top: 2rem ;
+  margin-bottom: 2rem ;
+}
+		
+		
+	.project-image2 {
+ grid-template-columns: 1fr; /* 한 줄 */
+ width: 100vw;
+  }
+	
+ .video-container {
+    width: 100vw;    /* 모바일에서는 화면 꽉 채우기 */
+    max-width: none; /* 최대 너비 제한 해제 */
+  }
+		
+			footer {
     font-size: 11px;
   }
+		
     }
-  </style>
+ </style>
 </head>
 <body>
   <header>
-    <nav>
+  <nav>
       <div class="logo">
         <a href="../index_en.html"><img src="../taekun_logo.png" alt="logo" /></a>
       </div>
@@ -304,7 +396,7 @@ footer a {
           <a href="video_en.html">VIDEO</a>
           <a href="marketing_en.html">MARKETING</a>
          <!-- <a href="casestudy.html">CASE STUDY</a> -->
-        <button class="lang-switch" onclick="location.href='../index.html'">KOR</button>
+          <button class="lang-switch" onclick="location.href='../index.html'">KOR</button>
         </div>
       </div>
     </nav>
@@ -315,45 +407,99 @@ footer a {
  </section>
 
 	<section class="project-gallery">
-      <img src="../assets/images/design/issey/projcet_1_thumbnail_1.png" alt="ART POSTER SERIES" class="project-image" />
-
-      <h2 class="project-title">ART POSTER SERIES 2 - Issey Miyake, Homme Plisse Haru Print </h2>
+		
+      <a href= "https://www.mxn.co.jp/project/vunque-launching-party/" target="_blank" rel="noopener noreferrer" >
+      <img src="../assets/images/marketing/vunque/projcet_thumbnail_2.jpg" alt="ART POSTER SERIES" class="project-image" />
+		</a>
+				  
+	  <a class="project-description3" href= "https://www.mxn.co.jp/project/vunque-launching-party/" target="_blank" rel="noopener noreferrer">	
+	  ※ All images and project rights belong to MXN JAPAN. Only images within the permitted scope are used. Click the text to visit the official website → </a>
+		
+      <h2 class="project-title">LAUNCHING PARTY - vunque, Omotesando</h2>
 
       <div class="project-description">
-         This is a personal art poster project created through visual research and reinterpretation of fashion brand identities and design elements.<br>
-Focusing on visual impact, I used each brand's imagery, logo, and various typefaces to compose a single, visually compelling image.<br>
-The works were designed with consideration for both digital content and offline environments.</div>
+     Participated in the Japan launch party for the Korean bag brand vunque.<br>
+This was the brand’s first step into the Japanese market, aimed at building brand awareness and establishing a network among local industry professionals.<br>
+The event invited celebrities, media, and fashion insiders from Korea and Japan—including Oh My Girl’s YooA and actor Ji-hoon Lee.<br>
+As the brand’s first official event in Japan, it focused on building a premium brand image and laying the foundation for future marketing efforts. </div>
 		
-<div style="width: 100vw; max-width: 1200px; margin-left: 0; text-align: center; padding-bottom: 2rem;">
-  <img src="../assets/images/design/issey/projcet_1_thumbnail_2.png" alt="project-image1" class="project-image"  />
-</div>
-		
-<div class="project-title2"> Project Overview </div>
-		
-<div class="project-description">
-Issey Miyake is a representative first-generation Japanese fashion designer.<br>
-The poster is based on the Homme Plissé 2016 F/W “HARU” collection, which visually expresses Eastern aesthetics.<br>
-Inspired by Japanese artists, the poster features a red circle symbolizing Japan and uses Japanese typography to complete the visual composition.</div>
-		
-		<div style="width: 100vw; max-width: 850px; margin-left: 0; text-align: center; padding-bottom: 2rem;">
-  <img src="../assets/images/design/issey/issey2.jpg" alt="project-image1" style="width: 65%; height: auto;" />
-</div>
-		
-<div style="width: 100vw; max-width: 850px; margin-left: 0; text-align: center; padding-bottom: 2rem;">
-  <img src="../assets/images/design/issey/issey1.jpg" alt="project-image" style="width: 65%; height: auto;" />
-</div><div style="width: 100vw; max-width: 850px; margin-left: 0; text-align: center; padding-bottom: 2rem;">
-  <img src="../assets/images/design/issey/issey3.jpg" alt="project-image1" style="width: 65%; height: auto;" />
-</div>
-		
-	<div class="project-description2">
-		Personal work<br>
-		02.2020 - 08.2020<br>
-		Tool : Photoshop, Illustrator, Lightroom
-		</div>
-    
-      <div class="back-link" onclick="history.back()">← back previous page</div>
-    </section>
 
+		
+		<!--
+		<div class="custom-line"></div>
+		-->
+		
+		<div class="project-title2"> Branding Point </div>
+		<div style="width: 100vw; max-width: 1200px; margin-left: 0; text-align: center; padding-bottom: 0rem; padding-bottom: 0.5rem; padding-top: 1rem;">
+  <img src="../assets/images/marketing/vunque/vunque1.jpg" alt="project-image1" class="project-image"  />
+</div>
+<!-- <div style="width: 90vw; max-width: 550px; margin-left: 0; text-align: center; padding-top: 2.5rem; padding-bottom: 4rem;">
+  <img src="assets/images/design/moogoong/logo.png" alt="project-image" style="width: 70%; height: auto;" />
+</div>	-->
+	  <div class="project-description">
+	<p>The 120m² venue was divided into zones for reception, catering, interviews, and party &amp; exhibition areas to increase visitor engagement and immersion in the brand.<br>
+To reflect the importance of this launch, the space was built around the brand's logo and signature design elements.<br>
+As a mid-to-high-end bag brand, the spatial concept emphasized a premium atmosphere.</p> </div>
+		
+
+
+			
+<div class="project-title2"> Contribution </div>		
+		
+	<div style="width: 100vw; max-width: 1200px; margin-left: 0; text-align: center; padding-bottom: 0rem; padding-bottom: 0.5rem; padding-top: 1rem;">
+  <img src="../assets/images/marketing/vunque/vunque3.jpg" alt="project-image1" class="project-image"  />
+</div>
+		
+	<div class="project-description">
+	<p>Space Design (Contribution: 80–90%)<br>
+・Planned the spatial concept to effectively reflect brand identity and created a SketchUp model<br>
+・Designed the layout considering visitor flow and content zones<br><br>
+
+Vendor Coordination (Contribution: 55–60%)<br>
+・Communicated with all vendors including production teams, fixture rental companies, and the event venue
+<br><br>
+Client Communication (Contribution: 70–75%)<br>
+・Served as the main contact with the brand<br>
+・Managed all aspects of event preparation and execution<br><br>
+
+On-site Video Planning (Contribution: 50–55%)<br>
+ <a class="project-description3" href= "https://www.mxn.co.jp/project/vunque-launching-party/" target="_blank" rel="noopener noreferrer">	
+・ Planned the event documentation video in response to the brand’s request (Click text to view the video)<br>
+		</a>
+ </p>
+	</div>
+		
+		
+	 
+
+
+
+
+
+
+
+	
+		
+		
+  
+		
+<!--
+		<div style="width: 80vw; max-width: 1200px; margin-left: 0; text-align: center; padding-bottom: 2rem;">
+  <img src="assets/images/design/yohji/projcet4.jpg" alt="project-image1" style="width: 65%; height: auto;" />
+</div><div style="width: 80vw; max-width: 1200px; margin-left: 0; text-align: center; padding-bottom: 2rem;">
+  <img src="assets/images/design/yohji/projcet2.jpg" alt="project-image1" style="width: 65%; height: auto;" />
+</div>
+		-->
+		
+		<div class="project-description2">
+		Personal work<br>
+		10.2024 - 10.2024<br>
+		Tool : Photoshop, Illustrator, Sketchup </div>
+    
+
+	<div class="back-link" onclick="history.back()">← back previous page</div>
+    </section>
+	
 <footer style="footer;">
   <div>© 2025 Taekun Kim. All rights reserved.</div>
   <div><a href="mailto:taekun.kim95@gmail.com" style="color: #999; text-decoration: underline;">taekun.kim95@gmail.com</a></div>
@@ -365,5 +511,6 @@ Inspired by Japanese artists, the poster features a red circle symbolizing Japan
       menu.classList.toggle('active');
     }
   </script>
+
 </body>
 </html>
