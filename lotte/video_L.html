@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>video</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-color: #fcfcfc;
+      --text-color: #222;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      color: var(--text-color);
+      background-color: var(--bg-color);
+      scroll-behavior: smooth;
+	   overflow-x: hidden;
+    }
+
+    header {
+      position: fixed;
+      left: 0;
+      width: 100%;
+      background: var(--bg-color);
+      z-index: 1000;
+    }
+
+    nav {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 1.2rem 1.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .logo {
+      margin-bottom: 2rem;
+      margin-top: 0.6rem;
+    }
+
+    .logo img {
+      width: 80px;
+      height: auto;
+      cursor: pointer;
+    }
+
+    .menu-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      gap: 1rem;
+    }
+
+    .menu {
+      display: flex;
+      gap: 7rem;
+      flex-wrap: nowrap;
+      align-items: center;
+	  transition: gap 0.3s, font-size 0.3s;
+    }
+
+    .menu a {
+      text-decoration: none;
+      color: #757575;
+      font-weight: 350 !important;
+      font-size: 12px;
+      transition: color 0.2s;
+      white-space: nowrap;
+    }
+
+    .menu a:hover {
+      color: #000000;
+    }
+
+    .lang-switch {
+      font-size: 11px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: #757575;
+      font-weight: 200;
+    }
+
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      gap: 4px;
+    }
+
+    .menu-toggle div {
+      width: 20px;
+      height: 2px;
+      background: #888;
+    }
+
+    section {
+      padding: 10px 40px 0px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .hero {
+      padding-top: 165px;
+      text-align: left;
+    }
+
+    .h2 {
+      font-weight: 400;
+      font-size: 16px;
+      color: #757575;
+	  margin-bottom: 2.2rem;
+      line-height: 1.6;
+      max-width: 700px;
+      margin-right: auto;
+    }
+
+    .projects {
+      display: flex;
+      flex-direction: column;
+    }
+
+.project-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-decoration: none;
+  color: inherit;
+  max-width: 900px;
+  overflow: hidden; /* ← 여기가 중요 */
+  position: relative;
+}
+
+    .project-item a {
+      text-decoration: none;
+      color: inherit;
+    }
+	  
+    .project-gallery {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4rem;
+      padding-bottom: 100px;
+	  padding-left: 10px;
+      padding-right: 10px;
+}
+    .project-thumb {
+      width: 100%;
+      max-width: 1000px;
+      height: auto;
+    }
+	  
+.thumbnail {
+  width: 75vw;
+  max-width: 900px;
+  overflow: hidden;
+  position: relative;
+  display: block;
+}
+  
+.project-item:hover .thumbnail img {
+  transform: scale(1.03);
+}
+	  
+.thumbnail img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+  display: block;
+}
+
+
+    .project-title {
+  margin-top: 1.2rem;
+  margin-bottom: 0.8rem;
+  font-size: 18px;
+  font-weight: 400;
+  color: #757575;
+  max-width: 100%;
+  text-align: left;
+}
+	  
+    .project-text {
+  margin-top: 0.0rem;
+  font-size: 14px;
+  font-weight: 400;
+  color: #757575;
+  max-width: 100%;
+  text-align: left;
+}
+	  
+	  footer {
+  text-align: center;
+  margin-top: 2rem;
+  padding: 2rem 0;
+  font-size: 13px;
+  color: #999;
+}
+footer a {
+  color: #999;
+  text-decoration: underline;
+}
+
+	  
+   @media (max-width: 1024px) {
+      .menu {
+        gap: 3rem;
+        font-size: 0.95rem;
+      }
+    }
+
+    @media (max-width: 900px) {
+      .menu {
+        gap: 2rem;
+        font-size: 0.9rem;
+      }
+    }
+	  
+    @media (max-width: 768px) {
+      .menu {
+        display: none;
+        flex-direction: column;
+        background: var(--bg-color);
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1.5rem 0;
+        gap: 1.5rem;
+      }
+
+      .menu.active {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: flex;
+      }
+
+      .menu-wrapper {
+        justify-content: space-between;
+      }
+	  
+	   .project-gallery {
+  width: 100%;
+    padding: 0 0px; /* 좌우 여백만 주기 */
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+
+  .project-item {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+   .thumbnail {
+    width: 100vw;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+
+   .project-title {
+    width: 100vw;
+    box-sizing: border-box;
+    font-size: 14px;
+    text-align: left;
+    margin-top: 16px;
+	margin-bottom: 10px;
+	padding: 0px 40px 0px;
+  }
+		
+    .project-text {
+  margin-top: 0rem;
+  font-size: 10px;
+  font-weight: 400;
+  color: #757575;
+  max-width: 100%;
+  text-align: left;
+  padding: 0px 40px 0px;
+}
+
+  .h2 { 
+ padding: 0px 40px 0px;}
+		
+		
+	footer {
+    font-size: 11px;
+  }
+		
+    section {
+      padding: 0px 0px 0px;
+      max-width: 100%;
+      margin: 0 auto;
+    }
+
+		
+    }
+	  
+  </style>
+</head>
+<body id="top">
+
+  <header>
+    <nav>
+      <div class="logo">
+        <a href="#top"><img src="../taekun_logo.png" alt="logo" /></a>
+      </div>
+      <div class="menu-wrapper">
+        <div class="menu-toggle" onclick="toggleMenu()">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="menu" id="navMenu">
+
+          <a href="../lotte/design2_L.html">DESIGN</a>
+          <a href="../lotte/video_L.html">VIDEO</a>
+          <a href="../lotte/marketing_L.html">MARKETING</a>
+          <!-- <a href="casestudy.html">CASE STUDY</a> -->
+
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="h2">PROJECTS</div>
+	</section>
+
+    <section class="project-gallery">
+<a href="../lotte/video_youtube_L.html" class="project-item">
+  <div class="thumbnail">
+    <img src="../assets/images/video/potbad/projcet_1_thumbnail_1.jpg" alt="Project 2 Thumbnail" />
+  </div>
+  <h3 class="project-title">YOUTUBE PROJECT</h3>
+  <h4 class="project-text">Potbad, Fashion Insight YouTube  </h4>
+</a>
+		
+		
+<a href="../lotte/video_brand2_L.html" class="project-item">
+  <div class="thumbnail">
+    <img src="../assets/images/video/moogoong/projcet_1_thumbnail_2.jpg" alt="Project 2 Thumbnail" />
+  </div>
+  <h3 class="project-title">BRAND CAMPAIGN VIDEO</h3>
+  <h4 class="project-text">Moogoong, Design Your History  </h4>
+</a>
+		
+
+    <a href="../lotte/video_wedding_L.html" class="project-item">
+    <div class="thumbnail">
+    <img src="../assets/images/video/wedding/projcet_1_thumbnail_1.jpg" alt="Project 2 Thumbnail" />
+		</div>
+    <h3 class="project-title">WEDDING CELEBRATION 2VIDEOS</h3>	
+	<h4 class="project-text"> Nakamura's Wedding &amp; Mother's Voice</h4>
+  </a>
+	
+	
+		
+  <!-- 필요하면 더 추가 -->
+</section>
+	  
+<footer style="footer;">
+  <div>© 2025 Taekun Kim. All rights reserved.</div>
+  <div><a href="mailto:taekun.kim95@gmail.com" style="color: #999; text-decoration: underline;">taekun.kim95@gmail.com</a></div>
+</footer>
+	  
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('navMenu');
+      menu.classList.toggle('active');
+    }
+  </script>
+
+</body>
+</html>
